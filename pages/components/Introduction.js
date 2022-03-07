@@ -13,8 +13,8 @@ const Introduction = () => {
                 <p className="text-paragraphGray text-[30px]  leading-10 font-light">I design and Develop web applications mmostly in NextJS and TailwindCSS. TailwindCSS, is my prefered CSS tool, as it increases performance, and responsiveness</p>
             </div>
 
-            <div className="mt-10">
-                <Image src="https://cdn.discordapp.com/attachments/817048198022430761/950096546215649330/signature_3.png" height={100} width={450} objectFit="cover"/>
+            <div className="mt-10 flex justify-start">
+                <img className="bg-cover h-[100px] w-[450px]" src="https://cdn.discordapp.com/attachments/817048198022430761/950096546215649330/signature_3.png" height={100} width={450} objectFit="cover"/>
 
             </div>
         </div>

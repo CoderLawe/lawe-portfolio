@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import About from './components/About'
 import Introduction from './components/Introduction'
+import Navbar from './components/Navbar'
+import RightSide from './components/RightSide'
+import Skills from './components/Skills'
 
 const Home = () => {
   return (
@@ -10,19 +14,24 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="lg:flex">
+      <nav className='fixed -right-0'>
+        <Navbar />
+      </nav>
+      <main className="lg:flex block">
           {/* Left Side */}
 
-          <div className="w-[60%] border-r border-gray-500">
+          <div className="lg:w-[60%] lg:border-r border-gray-500  order-2 md:order-1 ">
             <Introduction />
+
+            <About />
+
+            <Skills />
           </div>
 
           {/* Right Side */}
 
-          <div className="w-[40%] flex align-middle">
-            <div className='mx-auto mt-32 lg:h-[500px] w-[400px] border border-gray-500 px-10 py-10'>
-                <Image src="https://cdn.discordapp.com/attachments/817048198022430761/950061483608391751/f1.png" height={450} width={350} objectFit="cover"/>
-            </div>
+          <div className="lg:w-[40%] flex align-middle lg:fixed -right-0 order-1 md:order-2">
+              <RightSide />
           </div>
       </main>
     </div>
