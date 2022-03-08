@@ -4,7 +4,7 @@ const Card = ({ title, img, description }) => {
 
     
     return(
-        <div className="group transition-all ease-in-out duration-500 flex-col space-x-4 rounded-2xl shadow-lg w-[400px] ">
+        <div className="group transition-all ease-in-out duration-500 flex-col space-x-4 rounded-2xl shadow-lg lg:w-[400px]  ">
             <img className=" object-cover "src={img} alt="portfolio-card-cover"/>
 
             <div className="py-10 -mt-10  md:hidden group-hover:flex transition-all ease-in-out duration-500">

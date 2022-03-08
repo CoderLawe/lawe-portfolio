@@ -2,7 +2,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 
 const About = () => {
     return(
-        <div className="mx-20 pb-10">
+        <div className="lg:mx-20 mx-8 mt-10 pb-10">
             <h3 className="text-headerYellow text-xl">ABOUT ME</h3>
             <h1 className="text-gray-200 text-[52px] font-serif ">A Bit About Me</h1>
             <div className="w-[200px] bg-gray-500 h-[0.11rem]"/>
