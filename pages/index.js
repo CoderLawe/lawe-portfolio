@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import About from './components/About'
+import Contact from './components/Contact'
 import Introduction from './components/Introduction'
 import Navbar from './components/Navbar'
 import Portfolio from './components/Portfolio'
@@ -45,27 +46,33 @@ const Home = () => {
       <nav className='fixed -right-0 mr-32'>
           <Navbar />
       </nav> */}
-      <main className="lg:flex block">
+      <main className="lg:flex flex-col">
           {/* Left Side */}
 
-          <div className={scrolled ? "lg:w-[70%] lg:border-r border-gray-500  order-2 md:order-1 ":"lg:w-[60%] lg:border-r border-gray-500  order-2 md:order-1"}>
-            <Introduction />
+          <div className={scrolled ? "lg:w-[70%] transition-all  ease-in-out duration-500 lg:border-r border-gray-500  order-2 sm:order-1 ":"lg:w-[60%] lg:border-r border-gray-500  order-2 sm:order-1"}>
+            
+            <div className="order-2 md:order-1">
+              <Introduction />
 
-            <About />
+              <About />
 
-            <Skills />
+              <Skills />
 
-            <Portfolio />
+              <Portfolio />
+
+              <Contact />
+            </div>
+         
           </div>
 
           {/* Right Side */}
 
-          <div className={scrolled ? "lg:w-[30%] flex align-middle lg:fixed -right-0 order-1 md:order-2":"lg:w-[40%] flex align-middle lg:fixed -right-0 order-1 md:order-2"}>
+          <div className={scrolled ? "lg:w-[30%]  transition-all ease-in-out duration-500  align-middle lg:fixed -right-0 order-1 md:order-first ":"lg:w-[40%] flex align-middle lg:fixed -right-0 order-1 md:order-first"}>
               
               <div className="block">
                   <Navbar />
 
-                  <RightSide />
+                  <RightSide scrolled={scrolled} />
               </div>
              
           </div>
