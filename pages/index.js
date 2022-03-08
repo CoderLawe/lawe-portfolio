@@ -52,7 +52,7 @@ const Home = () => {
           <div className={scrolled ? "lg:w-[70%] transition-all  ease-in-out duration-500 lg:border-r border-gray-500  order-2 sm:order-1 ":"lg:w-[60%] lg:border-r border-gray-500  order-2 sm:order-1"}>
             
             <div className="">
-              <div className="flex  lg:hidden "> 
+              <div className="flex justify-center lg:hidden "> 
                 <RightSide />
               </div>
               <Introduction />
