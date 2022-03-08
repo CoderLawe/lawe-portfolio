@@ -1,11 +1,26 @@
-import MenuIcon from "@mui/icons-material/Menu"
+import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
+import { useEffect, useState } from "react";
 const Navbar = () => {
-    return(
-        <div className="justify-end mr-32 pt-2 ">
-            <div className="flex justify-between space-x-4 items-center">
 
-                <p className="text-gray-400">Menu</p>
-                 <MenuIcon className="text-gray-400 h-24 cursor-pointer"/>
+   
+    return(
+        <div className="flex mt-5  mx-[25%]">
+            <div className="flex justify-between space-x-10 items-center transition-all ease-out duration-300">
+                
+                <div className="flex-col space-y-3 group transition-all duration-300 ease-out">
+                    <HomeIcon className="h-10 w-10 text-gray-400  cursor-pointer hover:scale-125 transition-all ease-out duration-500" />
+                    
+                    <span className="hidden group-hover:flex text-white transition-all duration-300 ease-out">Home</span>
+                </div>
+
+                <div className="flex-col space-y-3 group transition-all duration-300 ease-out">
+                    <HomeIcon className="h-10 w-10 text-gray-400  cursor-pointer hover:scale-110 transition-all ease-out duration-500" />
+                    
+                    <span className="hidden group-hover:flex text-white transition-all duration-300 ease-out">Home</span>
+                </div>
+                {/* <p className="text-gray-400">Menu</p>
+                 <MenuIcon className="text-gray-400 h-24 cursor-pointer"/> */}
 
             </div>
         </div>
