@@ -8,6 +8,7 @@ import Navbar from './components/Navbar'
 import Portfolio from './components/Portfolio'
 import RightSide from './components/RightSide'
 import Skills from './components/Skills'
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Home = () => {
 
@@ -39,13 +40,16 @@ const Home = () => {
   return (
     <div className="bg-blackishBg h-full">
       <Head>
-        <title>Create Next App</title>
+        <title>Lawe Sosah | Digital Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 {/* 
       <nav className='fixed -right-0 mr-32'>
           <Navbar />
       </nav> */}
+              <div className="flex lg:hidden justify-end mr-10 pt-5 fixed -right-0">
+                <MenuIcon className="h-10 w-10 text-gray-400"/>
+            </div>
       <main className="lg:flex flex-col">
           {/* Left Side */}
 
@@ -70,7 +74,7 @@ const Home = () => {
 
           {/* Right Side */}
 
-          <div className={scrolled ? "lg:w-[30%]  transition-all ease-in-out duration-500  align-middle lg:fixed -right-0 order-1 md:order-first ":"lg:w-[40%] flex align-middle lg:fixed -right-0 order-1 md:order-first"}>
+          <div className={scrolled ? "lg:w-[30%]  transition-all ease-in-out duration-500  align-middle lg:fixed -right-0 order-1 md:order-first ":"lg:w-[40%] transition-all ease-in-out duration-500 flex align-middle lg:fixed -right-0 order-1 md:order-first"}>
               
               <div className="block">
                   <Navbar />

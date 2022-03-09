@@ -8,7 +8,7 @@ const About = () => {
             <div className="w-[200px] bg-gray-500 h-[0.11rem]"/>
 
             <p className="text-paragraphGray text-[30px]  leading-10 font-light mt-5">
-               My name is Lawe Sosah, and I'm 19 years old. I started programming around 7 years ago, mostly with Java, usually just as a passtime. Around 2017, I improved my knowledge of Python, and soon learned Webscraping, and Web development with the Django web framework.
+               My name is Lawe Sosah, and I'm 19 years old. I started programming around 7 years ago, mostly with Java, usually just as a passtime. Around 2017, I started learning Python, because of it's numerous applications in data science, web developement e.t.c. I also learned Webscraping, and Web development with the Django web framework.
 
             </p>
 
