@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const ClickedContext = createContext();
 
-export const ClickedProvider = ({children}) => {
+export default function ClickedProvider ({children})  {
 
     const [clicked, setClicked] = useState(false)
     
