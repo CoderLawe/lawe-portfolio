@@ -1,9 +1,9 @@
 const Contact = () => {
     return(
-        <div className="py-24 mx-20 block">
+        <div className="py-24 lg:mx-20 mx-12 block">
             <h3 className="text-headerYellow text-xl">CONTACT ME</h3>
 
-            <h1 className="text-gray-200 text-[52px] mt-10">Let's get in touch</h1>
+            <h1 className="text-gray-200 text-[40px] lg:text-[52px] mt-10 font-serif">Let's get in touch</h1>
             <div className="w-[200px] bg-gray-500 h-[0.11rem]"/>
 
             <p className="text-paragraphGray text-[30px] mt-5">
@@ -14,14 +14,14 @@ const Contact = () => {
 
             <form className="flex justify-center mt-8">
                 <div className="flex-col space-y-5">
-                    <div className="flex space-x-6">
-                        <input className="border border-headerYellow py-5 px-10 font-serif bg-transparent focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" type="text" placeholder="Name" />
+                    <div className="lg:flex lg:space-x-6 block space-y-6">
+                        <input className="border border-headerYellow p-5 font-serif bg-transparent focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" type="text" placeholder="Name" />
                         <input className="border border-headerYellow p-5 font-serif bg-transparent focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" type="email" placeholder="Email" />
 
                     </div>
 
                     <div className="">
-                        <textarea className="bg-transparent border border-headerYellow h-[350px] w-[550px] font-serif py-5 px-3 focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" placeholder="Enter your message here"/>
+                        <textarea className="bg-transparent border border-headerYellow h-[350px] lg:w-[550px] font-serif py-5 px-3 focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" placeholder="Enter your message here"/>
                     </div>
                     
                     <div className="flex justify-center">
