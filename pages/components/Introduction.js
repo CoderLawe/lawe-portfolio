@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Introduction = () => {
     return(
-        <div className="lg:py-32 lg:mx-20 pt-5 mx-8 block mt-5">
+        <div id="home" className="lg:py-32 lg:mx-20 pt-5 mx-8 block mt-5">
             <h3 className="text-headerYellow text-xl">INTRODUCTION</h3>
 
             <h1 className="text-gray-200 text-[45px] lg:text-[52px] mt-10">Web Developer</h1>

@@ -6,7 +6,7 @@ const RightSide = ({ scrolled }) => {
     return(
         <div className="flex">
             <div className={scrolled ? 'lg:mx-[15%] mt-10 mx-[7.5] lg:mt-20 lg:h-[580px] w-[350px] border border-gray-500 lg:px-10 px-8 py-10 ':'lg:mx-[25%]  mt-20 lg:h-[600px] lg:w-[400px] w-[350px] border border-gray-500 lg:px-10 px-8 py-10 '}>
-                <img  className={scrolled ? "object-cover h-[350px] lg:w-[300px] ": "bg-cover h-[400px] w-[350px]"} src="https://cdn.discordapp.com/attachments/817048198022430761/950061483608391751/f1.png" height={450} width={350} objectFit="cover"/>
+                <img  className={scrolled ? "object-contain h-[320px] lg:w-[300px] ": "bg-cover h-[320px] w-[350px]"} src="https://cdn.discordapp.com/attachments/817048198022430761/950061483608391751/f1.png" height={450} width={350} objectFit="cover"/>
 
                 <h3 className="text-gray-400 flex justify-center mt-5 font-bold">HI THERE! I'M</h3>
 
@@ -16,8 +16,12 @@ const RightSide = ({ scrolled }) => {
                 </div>
 
                 <div className="flex justify-between mt-5 mx-10">
+                    <a target="_blank" href="https://github.com/CoderLawe">
                         <InstagramIcon  className="text-headerYellow h-12 cursor-pointer"/>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/the_lawe_way">
                         <GitHubIcon  className="text-headerYellow h-12 cursor-pointer"/>
+                    </a>
                         <GitHubIcon  className="text-headerYellow h-12 cursor-pointer"/>
 
                 </div>

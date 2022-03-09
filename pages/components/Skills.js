@@ -5,7 +5,7 @@ const Skills = () => {
         <div>
           <h1 className="ml-20 text-headerYellow text-4xl">Skills</h1>
 
-          <div className="grid grid-cols-2 ml-20 mt-6 gap-y-6 mr-10  items-center align-middle">
+          <div className="grid grid-cols-2 lg:ml-20 mx-5 lg:mx-0 gap-x-4 mt-6 gap-y-6 lg:mr-10  items-center align-middle">
                 <img className="bg-cover " src="https://cdn.discordapp.com/attachments/817048198022430761/950483294749884456/JavascriptLogo.png" alt="skill-logo"/>
                 <img className="bg-cover " src="https://cdn.discordapp.com/attachments/817048198022430761/950483294946996344/djangoLogo.png" alt="skill-logo"/>
                 <img className="bg-cover " src="https://cdn.discordapp.com/attachments/817048198022430761/950483295215448074/PythonLogo.png" alt="skill-logo"/>

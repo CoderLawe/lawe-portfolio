@@ -1,6 +1,6 @@
 
 
-const Card = ({ title, img, description }) => {
+const Card = ({ title, img, description, link }) => {
 
     
     return(
@@ -13,6 +13,8 @@ const Card = ({ title, img, description }) => {
                         <h1 className="text-gray-400 font-serif mt-3 flex justify-center">{title}</h1>
                         <div className="w-[150px] mb-3  bg-headerYellow h-[0.11rem]"/>
                         <p className="text-paragraphGray">{description}</p>
+
+                        <a target="_blank" href={link} className="text-headerYellow font-serif mt-5 flex justify-center hover:underline cursor-pointer ">View Demo</a>
                     </div>
                   
                 </div>

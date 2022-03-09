@@ -1,6 +1,6 @@
 const Contact = () => {
     return(
-        <div className="py-24 lg:mx-20 mx-8 block">
+        <div id="contact" className="py-24 lg:mx-20 mx-8 block">
             <h3 className="text-headerYellow text-xl">CONTACT ME</h3>
 
             <h1 className="text-gray-200 text-[40px] lg:text-[52px] mt-10 font-serif">Let's get in touch</h1>
@@ -12,9 +12,9 @@ const Contact = () => {
             </p>
             <p className="text-gray-400 text-[30px] font-serif italic">-Lawe</p>
 
-            <form className="flex justify-center mt-8">
+            <form className="flex justify-center items-center mt-8">
                 <div className="flex-col space-y-5">
-                    <div className="lg:flex lg:space-x-6 block space-y-6">
+                    <div className="lg:flex lg:space-x-6 block space-y-6 lg:space-y-0">
                         <input className="border border-headerYellow p-5 font-serif bg-transparent focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" type="text" placeholder="Name" />
                         <input className="border border-headerYellow p-5 font-serif bg-transparent focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" type="email" placeholder="Email" />
 

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import About from './components/About'
 import Contact from './components/Contact'
 import Introduction from './components/Introduction'
@@ -9,10 +9,13 @@ import Portfolio from './components/Portfolio'
 import RightSide from './components/RightSide'
 import Skills from './components/Skills'
 import MenuIcon from "@mui/icons-material/Menu";
+import Menu from './components/Menu'
+import { ClickedContext } from './components/context/ClickedContext'
 
 const Home = () => {
 
   const [scrolled, setScrolled] = useState(false);
+  const [clicked, setClicked] = useContext(ClickedContext);
 
   const moveNav = () => {
       if(window.scrollY>120){
@@ -42,13 +45,16 @@ const Home = () => {
       <Head>
         <title>Lawe Sosah | Digital Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+        <link rel="icon" href="https://cdn.discordapp.com/attachments/839784544798638090/889140379251802122/download.png"/>
+        <meta name="description" content="Lawe Sosah's Digital portoflio"/>
+
+        </Head>
 {/* 
       <nav className='fixed -right-0 mr-32'>
           <Navbar />
       </nav> */}
-              <div className="flex lg:hidden justify-end mr-10 pt-5 fixed -right-0">
-                <MenuIcon className="h-10 w-10 text-gray-400"/>
+              <div className={clicked ? "flex lg:hidden justify-end  fixed -right-0":"flex lg:hidden justify-end mr-10 pt-5 fixed -right-0"}>
+                <Menu />
             </div>
       <main className="lg:flex flex-col">
           {/* Left Side */}
