@@ -21,10 +21,13 @@ const About = () => {
                 In 2021, I branched off to Javascript because of its versatility and usefulness in Web developement. I currently use NextJS, ReatcJS and TailwindCSS as the main development tools
             </p>
                 <div className="flex justify-center mx-auto ">
-                   <div className="flex  items-center space-x-2 text-white  px-10 py-6 bg-black rounded-xl hover:bg-gray-200 hover:text-black transition-all duration-500 ease-in-out cursor-pointer">
-                        <FileDownloadIcon className="h-12 w-12"/>
-                        <p className="font-serif italic cursor-pointer ">Download My Resume</p>
-                   </div>
+                    <a href="" target="_blank">
+                        <div className="flex  items-center space-x-2 text-white  px-10 py-6 bg-black rounded-xl hover:bg-gray-200 hover:text-black transition-all duration-500 ease-in-out cursor-pointer">
+                            <FileDownloadIcon className="h-10 w-12"/>
+                            <p className="italic cursor-pointer ">Download My Resume</p>
+                        </div>
+                    </a>
+           
                   
             </div>
 

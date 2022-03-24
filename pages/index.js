@@ -8,9 +8,11 @@ import Navbar from './components/Navbar'
 import Portfolio from './components/Portfolio'
 import RightSide from './components/RightSide'
 import Skills from './components/Skills'
+import Footer from "./components/Footer";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from './components/Menu'
 import { ClickedContext } from './components/context/ClickedContext'
+import Blog from './components/Blog'
 
 const Home = () => {
 
@@ -74,6 +76,13 @@ const Home = () => {
               <Portfolio />
 
               <Contact />
+
+              <div className="mx-8">
+                  <h1 className="text-headerYellow text-2xl">Blog(coming soon)</h1>
+              </div>
+              <Blog />
+
+              <Footer />
             </div>
          
           </div>
