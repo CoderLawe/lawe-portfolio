@@ -24,7 +24,7 @@ const Navbar = () => {
                         duration={1000}
                         >
                         
-                        <HomeIcon className="h-10 w-10 text-gray-400  cursor-pointer hover:scale-125 transition-all ease-out duration-500" />
+                        <HomeIcon className="h-10 w-10 text-gray-400 hover:text-white  cursor-pointer hover:scale-125 transition-all ease-out duration-500" />
 
                         </Link>
                         
@@ -39,7 +39,7 @@ const Navbar = () => {
                         smooth={true}
                         duration={1000}
                         >
-                        <PersonIcon className="h-10 w-10 text-gray-400  cursor-pointer hover:scale-125 transition-all ease-out duration-500" />
+                        <PersonIcon className="h-10 w-10 text-gray-400  hover:text-white cursor-pointer hover:scale-125 transition-all ease-out duration-500" />
                         
                         </Link>
                         {/* <span className="hidden group-hover:flex text-white transition-all duration-300 ease-out">Home</span> */}
@@ -54,7 +54,7 @@ const Navbar = () => {
                         duration={1000}
                         >
                         
-                        <WorkIcon className="h-10 w-10 text-gray-400  cursor-pointer hover:scale-125 transition-all ease-out duration-500" />
+                        <WorkIcon className="h-10 w-10 text-gray-400  hover:text-white cursor-pointer hover:scale-125 transition-all ease-out duration-500" />
                         </Link>
                         {/* <span className="hidden group-hover:flex text-white transition-all duration-300 ease-out">Home</span> */}
                     </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
                         duration={1000}
                         >
                         
-                        <PhoneIcon className="h-10 w-10 text-gray-400  cursor-pointer hover:scale-125 transition-all ease-out duration-500" />
+                        <PhoneIcon className="h-10 w-10 text-gray-400  hover:text-white cursor-pointer hover:scale-125 transition-all ease-out duration-500" />
                     </Link>
                         {/* <span className="hidden group-hover:flex text-white transition-all duration-300 ease-out">Home</span> */}
                     </div>

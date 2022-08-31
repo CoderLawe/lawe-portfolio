@@ -6,11 +6,11 @@ const Contact = () => {
             <h1 className="text-gray-200 text-[40px] lg:text-[52px] mt-10 font-serif">Let's get in touch</h1>
             <div className="w-[200px] bg-gray-500 h-[0.11rem]"/>
 
-            <p className="text-paragraphGray text-[30px] mt-5 font-serif">
+            <p className="text-paragraphGray text-[30px] mt-5 font-Cormorant">
                 Hi! I'd be more than pleased to have a chat with you. Feel free to send me a message below, and I'll get back to you as soon as possible.
                 Thanks.
             </p>
-            <p className="text-gray-400 text-[30px] font-serif italic">-Lawe</p>
+            <p className="text-gray-400 text-[30px] font-Cormorant italic">-Lawe</p>
 
             <form className="flex justify-center items-center mt-8">
                 <div className="flex-col space-y-5">

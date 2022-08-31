@@ -13,11 +13,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Menu from './components/Menu'
 import { ClickedContext } from './components/context/ClickedContext'
 import Blog from './components/Blog'
+import Preloader from "./components/Preloader";
 
 const Home = () => {
 
   const [scrolled, setScrolled] = useState(false);
   const [clicked, setClicked] = useContext(ClickedContext);
+  const [passed, setPassed] = useState(false);
 
   const moveNav = () => {
       if(window.scrollY>120){
@@ -25,7 +27,23 @@ const Home = () => {
       }else{
           setScrolled(false)
       }
+
   }
+
+  const hasPassed = () => {
+    setPassed(true);
+  }
+
+
+  useEffect(() => {
+    const timer =  setTimeout(() => {
+      hasPassed()
+    },11000);
+
+    return() => clearTimeout(timer);
+  
+  },[])
+   
   
   useEffect(function mount() {
       function onScroll(){
@@ -55,13 +73,16 @@ const Home = () => {
       <nav className='fixed -right-0 mr-32'>
           <Navbar />
       </nav> */}
+      <div className="">
+        <Preloader passed={passed}/>
+      </div>
               <div className={clicked ? "flex lg:hidden justify-end  fixed -right-0":"flex lg:hidden justify-end mr-10 pt-5 fixed -right-0"}>
                 <Menu />
             </div>
       <main className="lg:flex flex-col">
           {/* Left Side */}
 
-          <div className={scrolled ? "lg:w-[70%] transition-all  ease-in-out duration-500 lg:border-r border-gray-500  order-2 sm:order-1 ":"lg:w-[60%] lg:border-r border-gray-500  order-2 sm:order-1"}>
+          <div className={scrolled ? "lg:w-[65%] transition-all  ease-in-out duration-500 lg:border-r border-gray-500  order-2 sm:order-1 ":"lg:w-[60%] lg:border-r border-gray-500  order-2 sm:order-1"}>
             
             <div className="">
               <div className="flex justify-center lg:hidden "> 
@@ -89,7 +110,7 @@ const Home = () => {
 
           {/* Right Side */}
 
-          <div className={scrolled ? "lg:w-[30%]  transition-all ease-in-out duration-500  align-middle lg:fixed -right-0 order-1 md:order-first ":"lg:w-[40%] transition-all ease-in-out duration-500 flex align-middle lg:fixed -right-0 order-1 md:order-first"}>
+          <div className={scrolled ? "lg:w-[35%]  transition-all ease-in-out duration-500  align-middle lg:fixed -right-0 order-1 md:order-first ":"lg:w-[40%] transition-all ease-in-out duration-500 flex  lg:fixed -right-0 order-1 md:order-first"}>
               
               <div className="block">
                   <Navbar />

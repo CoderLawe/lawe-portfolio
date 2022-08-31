@@ -19,7 +19,7 @@ const Card = ({ title, img, description, link, first, second, third}) => {
     }
     
     return(
-        <div className="group transition-all ease-in-out duration-500 flex-col space-x-4 rounded-2xl shadow-lg lg:w-[400px] relative ">
+        <div className="group transition-all ease-in-out duration-500 flex-col space-x-4 rounded-2xl shadow-lg lg:w-[350px] relative ">
             <div className="cursor-pointer ">
                 <img onClick={() => handleClicked(first, second, third)} className=" object-cover group-hover:bg-black group-hover:opacity-75 transition-all duration-500 ease-out  "src={img} alt="portfolio-card-cover"/>
                
