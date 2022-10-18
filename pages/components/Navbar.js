@@ -5,11 +5,28 @@ import WorkIcon from "@mui/icons-material/Work";
 import PhoneIcon from "@mui/icons-material/Phone";
 import { useEffect, useState } from "react";
 import { Link, animateScroll as Scroll } from "react-scroll";
+const { motion } = require("framer-motion");
+
+
 const Navbar = () => {
 
    
     return(
-        <div>
+        <motion.div
+        initial={{
+            opacity:0
+        }}
+        animate={{
+            opacity:1
+        }}
+
+        transition={{
+            duration:2,
+            delay:12
+        
+        }}
+
+        >
 
             {/* Large screen navbar */}
             <div className="hidden lg:flex mt-5  mx-[25%]">
@@ -81,7 +98,7 @@ const Navbar = () => {
             {/* Smallscreen navbar */}
 
            
-        </div>
+        </motion.div>
      
     )
 }

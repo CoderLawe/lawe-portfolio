@@ -14,6 +14,9 @@ import Menu from './components/Menu'
 import { ClickedContext } from './components/context/ClickedContext'
 import Blog from './components/Blog'
 import Preloader from "./components/Preloader";
+import Aos from "aos";
+const { motion } = require("framer-motion");
+
 
 const Home = () => {
 
@@ -82,7 +85,21 @@ const Home = () => {
       <main className="lg:flex flex-col">
           {/* Left Side */}
 
-          <div className={scrolled ? "lg:w-[65%] transition-all  ease-in-out duration-500 lg:border-r border-gray-500  order-2 sm:order-1 ":"lg:w-[60%] lg:border-r border-gray-500  order-2 sm:order-1"}>
+          <motion.div 
+          initial={{
+            opacity:0,
+            x:-200
+          }}
+          animate={{
+            opacity:1,
+            x:0
+          }}
+
+          transition={{
+            duration:2,
+            delay:12
+          }}
+          className={scrolled ? "lg:w-[65%] transition-all  ease-in-out duration-500 lg:border-r border-gray-500  order-2 sm:order-1 ":"lg:w-[60%] lg:border-r border-gray-500  order-2 sm:order-1"}>
             
             <div className="">
               <div className="flex justify-center lg:hidden "> 
@@ -92,7 +109,24 @@ const Home = () => {
 
               <About />
 
-              <Skills />
+              {/* Left side */}
+
+              <div className="lg:mx-12 mx-8  w-full flex">
+                <div className="flex-col space-y-2 ">
+                  <h2 className="font-Cormorant text-gray-400 font-light text-[50px]"><span className="text-headerYellow">Tailor Made</span> Solutions</h2>
+                  <div className="lg:w-[80%] w-[70%]">
+                    <p className="text-paragraphGray text-[25px] lg:text-[30px] font-Cormorant my-10 leading-10 font-light">Whether it's a simple landing page or an admin dashboard, all my services are fully customizable and tailor made to suit you</p>
+
+                  </div>
+                </div>
+                
+              </div>
+
+              {/* Right side */}
+              <div>
+
+            </div>
+              {/* <Skills /> */}
 
               <Portfolio />
 
@@ -106,7 +140,7 @@ const Home = () => {
               <Footer />
             </div>
          
-          </div>
+          </motion.div>
 
           {/* Right Side */}
 

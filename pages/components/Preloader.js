@@ -1,61 +1,88 @@
-import { useState } from "react";
+import React, { useEffect, useState } from 'react'
+import BlenderIcon from "@mui/icons-material/Blender";
+import CoffeeIcon from "@mui/icons-material/Coffee";
+import { Typewriter } from "react-simple-typewriter";
+import CodeIcon from '@mui/icons-material/Code';
+import PencilIcon from "@mui/icons-material/Create";
+// import { motion } from "framer-motion";
+const { motion } = require("framer-motion");
 
-import Typewriter from "typewriter-effect";
-const preloader = ({ passed }) => {
+
+function Preloader() {
 
     const [loaded, setLoaded] = useState(false);
-    return(
-        <div>
 
-{/*  preloader start */}
+    const resetLoading = () => {
+        setLoaded(true)
+      }
+
+   
+    useEffect(() => {
+            const timer = setTimeout(() => resetLoading(), 10000);
+            return () => clearTimeout(timer);
+    },[])
+  return (
             
-{/* <div className={passed ? "hidden":"items-center bg-coolYellow flex h-[100vh] w-full justify-center left-0 fixed top-0 transition-all z-[60]"}> */}
-{/* <div className={passed ? "hidden":"items-center bg-blackishBg flex h-[100vh] w-full justify-center left-0 fixed top-0 transition-all z-[60]"}> */}
-<div className={passed ? "hidden": "bg-loaderBg h-[100vh] w-full"}>
-<div className="w-full h-[100vh] flex  items-center justify-center bg-blackishBg bg-opacity-95 left-0 fixed top-0 transition-all z-[60]">
-  <div className="flex justify-center ">
-                <div className="flex-col space-y-5">
-                  <div className="flex space-x-4 transition-all duration-500 items-center">
+    <div className={loaded ? "hidden":"items-center bg-black flex h-[100vh] w-full justify-center left-0 fixed top-0 transition-all z-[60]"}>
+            <div className="flex justify-center">
+            <div className="flex-col space-y-5">
 
-                    <div className="text-gray-300 my-auto font-Cormorant text-[45px] block space-y-5 items-center">
-                            <Typewriter 
-                                onInit={(typewriter)=> {
-            
-                                typewriter
-                                
-                                .typeString("Hi.. I'm Lawe")
-                                    
-                                .pauseFor(3000)
-                                .deleteAll()
-                                .typeString("Feel free to have a look around!")
-                                .start();
-                                }}
-                            />           
+                <motion.h1 
+                initial={{
+                  opacity:0.5
+                }}
+                animate={{
+                  opacity:1
+                }}
 
-                            {/* <h1>Plane Icon</h1>           */}
-                    </div>
- 
-                 
-                    
-                    {/* <h1 className="text-white font-Cormorant text-[40px]"><span data-aos="zoom-in-up" data-aos-duration="5000" className="text-[50px] text-coolYellow font-Cormorant animate ">B</span>ites</h1>
-                    <h2 className="text-white font-Cormorant text-[40px] animate-pulse ">on the</h2>
-                    <h2 className="text-white font-Cormorant text-[40px] animate-pulse">double </h2> */}
+                transition={{
+                  duration:2
+                }}
+                className='font-Cormorant font-light text-[12px] lg:text-[45px] text-headerYellow text-center'>Lawe sosah </motion.h1>
+                <div className="flex  justify-center space-x-4 items-center">
+                {/* <h1 className="text-yellow-200 font-Cormorant text-[28px]">I develop</h1> */}
 
-                  </div>
-
-                  {/* <LocalDiningIcon className="text-coolYellow h-36"/> */}
-
+                <div className="font-Cormorant italic text-yellow-100 text-[28px]">
+                    <Typewriter 
+                            words={['Tailor made','Fully Responsive','SEO friendly']}
+                            loop={1}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            />
                 </div>
-                
-              </div>
-          </div>
-           
-    </div>
-            
 
-        {/* Preloader end */}
+                    
+                </div>
+            
+                <div className="flex justify-center space-x-4 transition-all duration-500 items-center">
+               
+                <div className="block space-y-4 items-center">
+                    <div className="flex  space-x-4 items-center">
+                        <CodeIcon className="h-10 w-10 text-green-800 animate-pulse"/>
+                        <PencilIcon className="h-10 w-10 text-yellow-500 animate-pulse"/>
+                        <CoffeeIcon className="h-10 w-10 text-yellow-800 animate-pulse"/>
+
+                    </div>
+                    {/* <h1>Blast Smoothies</h1> */}
+                </div>
+               
+
+
+                
+               
+                </div>
+
+                {/* <LocalDiningIcon className="text-coolYellow h-36"/> */}
+
+            </div>
+            
+            </div>
         </div>
-    )
+           
+
+  )
 }
 
-export default preloader
+export default Preloader

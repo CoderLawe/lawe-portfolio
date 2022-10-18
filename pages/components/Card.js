@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { FirstContext, ModalContext, PostContext, SecondContext, Thirdcontext } from "./context/ClickedContext";
 import SearchIcon from "@mui/icons-material/Search";
+import Image from "next/image";
 const Card = ({ title, img, description, link, first, second, third}) => {
 
     const [post, setPost] = useContext(PostContext);
@@ -21,7 +22,7 @@ const Card = ({ title, img, description, link, first, second, third}) => {
     return(
         <div className="group transition-all ease-in-out duration-500 flex-col space-x-4 rounded-2xl shadow-lg lg:w-[350px] relative ">
             <div className="cursor-pointer ">
-                <img onClick={() => handleClicked(first, second, third)} className=" object-cover group-hover:bg-black group-hover:opacity-75 transition-all duration-500 ease-out  "src={img} alt="portfolio-card-cover"/>
+                <img onClick={() => handleClicked(first, second, third)} className="h-[200px] object-cover group-hover:bg-black group-hover:opacity-75 transition-all duration-500 ease-out" layout="fill" src={img} alt="portfolio-card-cover"/>
                
             </div>
             <div onClick={() => handleClicked(first, second, third)}className="p-5 cursor-pointer z-50 -mt-[30%] right-[50%] absolute translate-x-[50%] opacity-0 group-hover:opacity-100 transform transition-all duration-300">
