@@ -70,6 +70,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" href="https://cdn.discordapp.com/attachments/839784544798638090/889140379251802122/download.png"/>
         <meta name="description" content="Lawe Sosah's Digital portoflio"/>
+        
 
         </Head>
 {/* 
@@ -111,7 +112,7 @@ const Home = () => {
 
               {/* Left side */}
 
-              <div className="lg:mx-12 mx-8  w-full flex">
+              <div className="lg:mx-12 pl-[12.5%]  w-full flex">
                 <div className="flex-col space-y-2 ">
                   <h2 className="font-Cormorant text-gray-400 font-light text-[50px]"><span className="text-headerYellow">Tailor Made</span> Solutions</h2>
                   <div className="lg:w-[80%] w-[70%]">
