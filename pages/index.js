@@ -15,10 +15,13 @@ import { ClickedContext } from './components/context/ClickedContext'
 import Blog from './components/Blog'
 import Preloader from "./components/Preloader";
 import Aos from "aos";
+
 const { motion } = require("framer-motion");
 
 
 const Home = () => {
+
+  
 
   const [scrolled, setScrolled] = useState(false);
   const [clicked, setClicked] = useContext(ClickedContext);
@@ -112,7 +115,7 @@ const Home = () => {
 
               {/* Left side */}
 
-              <div className="lg:mx-12 pl-[12.5%]  w-full flex">
+              <div className="lg:mx-12 pl-[12.5%] lg:pl-0  w-full flex">
                 <div className="flex-col space-y-2 ">
                   <h2 className="font-Cormorant text-gray-400 font-light text-[50px]"><span className="text-headerYellow">Tailor Made</span> Solutions</h2>
                   <div className="lg:w-[80%] w-[70%]">

@@ -1,5 +1,14 @@
 import { send } from "emailjs-com";
-import { useState } from "react";
+import { useState, forwardRef } from "react";
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+
+
+const Alert = forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+
 
 const Contact = () => {
     const [toSend, setToSend] = useState({
@@ -7,6 +16,22 @@ const Contact = () => {
         message:"",
         reply_to:"",
     });
+
+    const [open, setOpen] = useState(false);
+
+    const handleClick = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = (event, reason) => {
+      if (reason === 'clickaway') {
+        return;
+      }
+  
+      setOpen(false);
+    };
+
+    
 
 const onSubmit = (e) => {
     e.preventDefault();
@@ -25,6 +50,7 @@ const onSubmit = (e) => {
     })
 
     setToSend({from_name:"", message:"", reply_to:""})
+    setOpen(true)
 
 }
 
@@ -35,6 +61,11 @@ const handleChange = (e) => {
   
     return(
         <div id="contact" className="py-24 lg:mx-20 mx-8 block">
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                Your email was succesfully sent. I will reply to you as soon as possible!
+            </Alert>
+            </Snackbar>
             <h3 className="text-headerYellow text-xl">CONTACT ME</h3>
 
             <h1 className="text-gray-200 text-[40px] lg:text-[52px] mt-10 font-serif">Let's get in touch</h1>
