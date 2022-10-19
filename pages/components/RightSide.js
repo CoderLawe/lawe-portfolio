@@ -7,6 +7,7 @@ import { useSpring, useTransition, animated, to, Spring } from '@react-spring/we
 import  { useRef, useEffect, useState } from 'react'
 import Profile from "./Profile";
 import Gallery from "./Gallery";
+import SmallProfile from "./SmallProfile";
 
 const RightSide = ({ scrolled }) => {
     const domTarget = useRef(null);
@@ -34,8 +35,15 @@ const RightSide = ({ scrolled }) => {
 
     return(
        <div>
+        <div className="hidden lg:flex">
           <Profile scrolled={scrolled}/>
 
+        </div>
+
+        <div className="flex lg:hidden">
+          <SmallProfile scrolled={scrolled} />
+
+        </div>
           {/* <Gallery /> */}
        </div>
     )
