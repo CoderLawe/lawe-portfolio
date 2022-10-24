@@ -80,13 +80,13 @@ const handleChange = (e) => {
             <form className="flex justify-center items-center mt-8">
                 <div className="flex-col space-y-5">
                     <div className="lg:flex lg:space-x-6 block space-y-6 lg:space-y-0">
-                        <input name="from_name"  value={toSend.from_name} onChange={handleChange} className="border border-headerYellow p-5 font-serif bg-transparent focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" type="text" placeholder="Name" />
-                        <input name="reply_to" value={toSend.reply_to} onChange={handleChange}  className="border border-headerYellow p-5 font-serif bg-transparent focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" type="email" placeholder="Email" />
+                        <input name="from_name"  value={toSend.from_name} onChange={handleChange} className="border border-headerYellow p-5 font-serif bg-transparent focus:outline-none w-[80vw] lg:w-[auto] text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" type="text" placeholder="Name" />
+                        <input name="reply_to" value={toSend.reply_to} onChange={handleChange}  className="border border-headerYellow p-5 font-serif bg-transparent focus:outline-none w-[80vw] lg:w-[auto] text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" type="email" placeholder="Email" />
 
                     </div>
 
                     <div className="">
-                        <textarea name="message" value={toSend.message} onChange={handleChange}  className="bg-transparent border border-headerYellow h-[350px] lg:w-[550px] font-serif py-5 px-3 focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" placeholder="Enter your message here"/>
+                        <textarea name="message" value={toSend.message} onChange={handleChange}  className="bg-transparent border border-headerYellow h-[350px] w-[80vw] lg:w-[550px] font-serif py-5 px-3 focus:outline-none text-gray-400 transition-all duration-500 ease-out focus:border-gray-400" placeholder="Enter your message here"/>
                     </div>
                     
                     <div className="lg:flex justify-center">

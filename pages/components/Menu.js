@@ -13,7 +13,7 @@ const Menu = () => {
         setClicked(false)
     }
     return(
-        <div className={clicked && "bg-blackishBg transition-all duration-500 ease-out z-50 "}>
+        <nav className={clicked && "bg-blackishBg transition-all duration-500 ease-out z-50 "}>
             <MenuIcon onClick={() => setClicked(true)} className={clicked ? "hidden": "flex h-12 w-12 cursor-pointer text-gray-400"}/>
 
             <div className={clicked ? "flex  h-screen w-screen bg-blackishBg   justify-center cursor-pointer" : "hidden"}>
@@ -77,7 +77,7 @@ const Menu = () => {
                 </div>
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }
 

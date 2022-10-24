@@ -19,7 +19,7 @@ const About = () => {
         }}
         id="about" className="lg:mx-20 mx-8 lg:mt-0 mt-8  pb-10">
             <h3 className="text-headerYellow text-xl">ABOUT ME</h3>
-            <h1 className="ont-Cormorant text-gray-400 font-light text-[50px] ">A Bit About Me</h1>
+            <h1 className="font-Cormorant text-gray-400 font-light text-[50px] ">A Bit About Me</h1>
             <div className="w-[200px] bg-gray-500 h-[0.11rem]"/>
 
             <p className="text-paragraphGray text-[25px] lg:text-[30px] font-Cormorant my-10 leading-10 font-light ">

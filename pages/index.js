@@ -72,7 +72,7 @@ const Home = () => {
         <title>Lawe Sosah | Digital Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" href="https://cdn.discordapp.com/attachments/839784544798638090/889140379251802122/download.png"/>
-        <meta name="description" content="Lawe Sosah's Digital portoflio"/>
+        <meta name="description" content="Lawe Sosah is a freelance web developer with experience in ReatJs/NextJS"/>
         
 
         </Head>
@@ -115,10 +115,10 @@ const Home = () => {
 
               {/* Left side */}
 
-              <div className="lg:mx-12 pl-[12.5%] lg:pl-0  w-full flex">
+              <div className="lg:mx-12  lg:pl-0  w-full flex">
                 <div className="flex-col space-y-2 ">
-                  <h2 className="font-Cormorant text-gray-400 font-light text-[50px]"><span className="text-headerYellow">Tailor Made</span> Solutions</h2>
-                  <div className="lg:w-[80%] w-[70%]">
+                  <h2 className="font-Cormorant text-gray-400 font-light text-[50px] ml-3"><span className="text-headerYellow">Tailor Made</span> Solutions</h2>
+                  <div className="lg:w-[80%] px-5 lg:px-0">
                     <p className="text-paragraphGray text-[25px] lg:text-[30px] font-Cormorant my-10 leading-10 font-light">Whether it's a simple landing page or an admin dashboard, all my services are fully customizable and tailor made to suit you</p>
 
                   </div>

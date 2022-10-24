@@ -12,7 +12,7 @@ const Navbar = () => {
 
    
     return(
-        <motion.div
+        <motion.nav
         initial={{
             opacity:0
         }}
@@ -98,7 +98,7 @@ const Navbar = () => {
             {/* Smallscreen navbar */}
 
            
-        </motion.div>
+        </motion.nav>
      
     )
 }
