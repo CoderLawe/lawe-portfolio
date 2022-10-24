@@ -72,7 +72,7 @@ const Home = () => {
         <title>Lawe Sosah | Digital Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" href="https://cdn.discordapp.com/attachments/839784544798638090/889140379251802122/download.png"/>
-        <meta name="description" content="Lawe Sosah is a freelance web developer with experience in ReatJs/NextJS"/>
+        <meta name="description" content="Lawe Sosah is a freelance web developer with experience in ReactJs/NextJS"/>
         
 
         </Head>
