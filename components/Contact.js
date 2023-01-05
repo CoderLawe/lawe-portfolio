@@ -72,7 +72,7 @@ const handleChange = (e) => {
             <div className="w-[200px] bg-gray-500 h-[0.11rem]"/>
 
             <p className="text-paragraphGray text-[30px] mt-5 font-Cormorant">
-                Hi! I'd be more than pleased to have a chat with you. Feel free to send me a message below, and I'll get back to you as soon as possible.
+                Hi! I would be pleased to have a chat with you. Feel free to send me a message below, and I will get back to you as soon as possible.
                 Thanks.
             </p>
             <p className="text-gray-400 text-[30px] font-Cormorant italic">-Lawe</p>

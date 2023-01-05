@@ -1,24 +1,24 @@
+import React from 'react'
 import Image from "next/image";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Carousel from "react-responsive-carousel"
-import styles from '../../styles/styles.module.css'
+import styles from '../styles/styles.module.css'
 import { useSpring, useTransition, animated, to, Spring } from '@react-spring/web'
 import { useRef, useEffect, useState } from 'react'
 const { motion } = require("framer-motion");
 
-
-const Profile = ({ scrolled }) =>{
-    return(
-        <motion.div
+function SmallProfile({ scrolled }) {
+  return (
+    <motion.div
         initial={{
             opacity:0,
-            x:500
+            y:-500
         }}
 
         animate={{
             opacity:1,
-            x:0
+            y:0
         }}
 
         transition={{
@@ -50,7 +50,8 @@ const Profile = ({ scrolled }) =>{
                 </div>
             </div>        
             </motion.div>
-    )
+ 
+  )
 }
 
-export default Profile
+export default SmallProfile

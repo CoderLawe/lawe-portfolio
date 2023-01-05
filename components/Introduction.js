@@ -1,8 +1,14 @@
 import Image from "next/image";
+import Aos from "aos"
+import { useEffect } from "react";
 const { motion } = require("framer-motion");
 
 
 const Introduction = () => {
+
+    useEffect(() => {
+        Aos.init()
+    },[])
     return(
         <motion.div
         initial={{
@@ -20,7 +26,7 @@ const Introduction = () => {
             delay:11
 
         }}
-         id="home" className="lg:py-32 lg:mx-20 pt-5 mx-8 block mt-5">
+         id="home" data-aos="fade-in" data-aos-duration="3000" className="lg:py-32 lg:mx-20 pt-5 mx-8 block mt-5  ">
             <h3 className="text-headerYellow text-xl">INTRODUCTION</h3>
 
             <h1 className="text-gray-300 text-[45px] lg:text-[52px] mt-10 font-Cormorant">Web Developer</h1>

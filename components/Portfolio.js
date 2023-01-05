@@ -5,8 +5,9 @@ import Button from '@mui/material/Button';
 import { useState, useContext } from "react";
 import { Typography } from "@mui/material";
 import Image from "next/image"
-import { FirstContext, ModalContext, PostContext, SecondContext, Thirdcontext } from "./context/ClickedContext";
+import { FirstContext, ModalContext, PostContext, SecondContext, Thirdcontext, FourthContext, HoveredContext } from "./context/ClickedContext";
 import { useEffect } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Portfolio = () => {
@@ -17,6 +18,9 @@ const Portfolio = () => {
     const [firstImage, setFirstImage] = useContext(FirstContext)
     const [secondImage, setSecondImage] = useContext(SecondContext)
     const [thirdImage, setThirdImage] = useContext(Thirdcontext)
+    const [fourthImage, setFourthImage] = useContext(FourthContext)
+
+    const [hovered, setHovered] = useContext(HoveredContext);
     const handleOpen = (post) => {
         if(modalOpen){
             setOpen(true)
@@ -47,7 +51,8 @@ const Portfolio = () => {
     //     console.log('images',images)
     //   },[post])
     return(
-        <div id="portfolio" className="lg:mx-12 mx-8 pb-10 mt-12">
+        <div id="portfolio" className="lg:mx-12 mx-8 pb-10 mt-12 relative z-[10]">
+            <div className="absolute h-[240px] w-[240px] bg-white/15 rotate-[12.95deg] top-32 left-0 blur-[83px] "/>
                 {/* <Button onClick={handleOpen}>Open modal</Button> */}
                 <Modal
                 open={modalOpen}
@@ -57,18 +62,62 @@ const Portfolio = () => {
 
                 >
 
-                <Box className="p-10 bg-transparent bg-opacity-75  lg:mx-52 lg:mt-48 border-none focus:outline-none" >
-                   <div className="hidden lg:flex justify-between space-x-8 gap-4 ">
-                        <Image src={firstImage} height={500} width={610}  objectFit="cover"/>
-                        <Image src={secondImage} height={500} width={610}  objectFit="cover"/>
-                        <Image src={thirdImage} height={500} width={610} objectFit="cover" />
+                <Box className="relative py-[10px] my-[25%] lg:px-10 lg:py-10 pbackdrop-blur-[13.5px] bg-white bg-opacity-[0.18] lg:w-[1200px]  lg:mx-auto lg:mt-[24px] border-none focus:outline-none rounded-[8px]" >
+                 
+                 <AiOutlineClose onClick={() => handleClose()}className="absolute top-[12px] cursor-pointer left-[12px] h-[32px] w-[32px] text-white"/>
+
+                  <div className="hidden lg:grid lg:grid-cols-2 gap-x-8 gap-y-4  ">
+                    <div className="h-[1/2] w-[1/2] relative">
+                        <Image src={firstImage} layout="fill" alt="first image" objectFit="cover"/>
+                    </div>
+
+                    <div className="h-[300px] w-[1/2] relative">
+                        <Image src={secondImage} layout="fill" alt="first image" objectFit="cover"/>
+                    </div>
+
+                    <div className="h-[300px] w-[1/2] relative">
+                        <Image src={thirdImage} layout="fill" alt="first image" objectFit="cover"/>
+                    </div>
+
+                    {
+                        fourthImage && (
+                            <div className="h-[300px] w-[1/2] relative">
+                                <Image src={fourthImage} layout="fill" alt="first image" objectFit="cover"/>
+                            </div>
+    
+                        )
+                    }
+
+                   
+
+               
+
+                
+                  </div>
                 {/* When image is clicked, image src is set */}
-                   </div>
-                        <CloseIcon onClick={handleClose}className="h-10 w-10 text-gray-200 lg:hidden" />
-                   <div className="block gap-y-4 h-[60vh] overflow-y-scroll lg:hidden">
-                        <Image src={firstImage} height={500} width={610}  objectFit="cover"/>
-                        <Image src={secondImage} height={500} width={610}  objectFit="cover"/>
-                        <Image src={thirdImage} height={500} width={610} objectFit="cover" />
+                <AiOutlineClose onClick={() => handleClose()}className="absolute top-[12px] cursor-pointer left-[12px] h-[32px] w-[32px] text-white"/>
+                   <div className="grid grid-cols-2 gap-y-4 gap-x-4 mx-[5px]  overflow-y-scroll lg:hidden">
+                        <div className="relative h-[150px] w-[1/2] ">
+                            <Image src={firstImage} layout="fill" objectFit="cover"/>
+                        </div>
+
+                        <div className="relative h-[150px] w-[150px] ">
+                            <Image src={secondImage} layout="fill" objectFit="cover"/>
+                        </div>
+
+                        <div className="relative h-[150px] w-[1/2] ">
+                            <Image src={thirdImage} layout="fill" objectFit="cover"/>
+                        </div>
+
+                        {
+                            fourthImage && (
+                                <div className="relative h-[150px] w-[1/2] ">
+                                    <Image src={fourthImage} layout="fill" objectFit="cover"/>
+                                </div>
+                            )
+                        }
+                     
+                       
                    </div>
                 </Box>
                 </Modal>
@@ -78,6 +127,7 @@ const Portfolio = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-16 mt-6">
                 {/* Portfolio Projects */}
+                <Card title="Kona Equity Premium Page Redesign" description="This was a frontend intensive  redesign of Kona Equity's existing landing page. It was built with the aim of boosting conversions. It makes use of glassmorphism, gradients and unique colours to produce a truly unique browsing experience.  " link="https://konaequity.com/pricing" img="https://cdn.discordapp.com/attachments/817048198022430761/1056661734913474640/Screen_Shot_2022-12-24_at_7.22.38_PM.png" first="https://cdn.discordapp.com/attachments/839784544798638090/1056301485123702835/Screen_Shot_2022-12-24_at_7.31.23_PM.png" second="https://cdn.discordapp.com/attachments/839784544798638090/1056301484783972542/Screen_Shot_2022-12-24_at_7.31.53_PM.png" third="https://cdn.discordapp.com/attachments/839784544798638090/1056301485752856676/Screen_Shot_2022-12-24_at_7.30.49_PM.png" fourth="https://cdn.discordapp.com/attachments/817048198022430761/1056652095169773568/kona-3.png"/>
                 <Card link="https://juice-bar-nextjs.vercel.app" img="https://cdn.discordapp.com/attachments/817048198022430761/1030413859296661515/Juice-bar.png" first="https://cdn.discordapp.com/attachments/817048198022430761/1030413857824452628/juice-bar-contact.png" second="https://cdn.discordapp.com/attachments/817048198022430761/1030413858185166878/juice-bar-about2.png" third="https://cdn.discordapp.com/attachments/817048198022430761/1030413858894000179/Juice-bar-About.png" description="Fully responsive Smoothie bar landing page with unique UI features. This was built in NextJS with TailwindCSS and Typescript. It also includes several animations using framer-motion, a lightweight animation library."/>
                 <Card link=" https://bites-on-the-double.vercel.app/" first="https://cdn.discordapp.com/attachments/817048198022430761/912216484665782282/Screen_Shot_2021-11-22_at_7.31.14_AM.png" second="https://cdn.discordapp.com/attachments/817048198022430761/912216484963549234/Screen_Shot_2021-11-22_at_7.30.40_AM.png" third="https://cdn.discordapp.com/attachments/817048198022430761/912216981946638376/Screen_Shot_2021-11-22_at_7.40.04_AM.png" title="Restaurant App with API and admin CMS" img="https://cdn.discordapp.com/attachments/817048198022430761/912216484963549234/Screen_Shot_2021-11-22_at_7.30.40_AM.png" description="I built this Restaurant app with NextJS TailwindCSS, and JSON server for the backend CMS. I was mostly experimenting with several animation libraries, and ways of making a CMS."/>
                 <Card link="https://lawe.pythonanywhere.com" first="https://lawe-portfolio.web.app/img/ecom_detailpage.png" second="https://lawe-portfolio.web.app/img/ecom_admin.png" third="https://lawe-portfolio.web.app/img/ecom_cover.png" title="Ecommerce WebApp with Python and Django" img="https://lawe-portfolio.web.app/img/ecom_cover.png" description="This was definitely one of my most complicated builds to date. It features a neat UI, Paypal payment integration, a blog, the ability to add reviews, a fully built Admin console/CRM, and loads of other features. This is without doubt the project that has taught me the most about django"/>
@@ -89,7 +139,7 @@ const Portfolio = () => {
                 <Card link="https://amazon-clone-psi-nine.vercel.app" first="https://cdn.discordapp.com/attachments/817048198022430761/863165976153292861/Screen_Shot_2021-07-09_at_11.12.49_PM.png" second="https://cdn.discordapp.com/attachments/817048198022430761/863164123326840892/Screen_Shot_2021-07-09_at_11.05.28_PM.png" third="https://cdn.discordapp.com/attachments/817048198022430761/863164486445039657/Screen_Shot_2021-07-09_at_11.07.03_PM.png" title="Amazon CLone with NextJS TailwindCSS and FakestoreAPI" img="https://cdn.discordapp.com/attachments/817048198022430761/863165976153292861/Screen_Shot_2021-07-09_at_11.12.49_PM.png" description="This is an Amazon clone built with React and NextJS, as well as Redux for state management, NextAuth and Firebase for Authentication, and Firestore"/>
 
                 {/* <Card title="Netflix Clone with ReactJS, and the TMDB movie API" img="https://cdn.discordapp.com/attachments/817048198022430761/872201898424401960/Screen_Shot_2021-08-03_at_10.38.30_PM.png" description="This is an Netflix Clone built with React and with data from TMDB. I learned a lot about CSS and flex box from this build specifically" /> */}
-                <Card title="Full stack Blog Application with Admin CMS" first="https://lawe-portfolio.web.app/img/cartopia.png" second="https://lawe-portfolio.web.app/img/ecom_sosah2.png" third="https://lawe-portfolio.web.app/img/blog_admin.jpg"img="https://lawe-portfolio.web.app/img/cartopia.png" description="Cartopia, was my second real Django project. I learned most of the django basics from this app, and improved it bit by bit in my free time. I built the first version with my bro back in 2019, and it had a pretty basic front-end. Thankfully, it had full CRUD functionality. Later, as my front-end skills grew to match my back-end skills, I began to add features like a carousel, well designed forms, and a pretty cool admin section with basic analytics, Comment moderation, Post creation, Updating and deleting, Newsletter email lists collection, e.t.c. In my books, it's technically not yet complete, but then again I know that there will always be something to add. Enjoy having a look at it, and please let me know what you think in the comments. Feel free to check out the GitHub repo! -Lawe Sosah"/>
+                <Card title="Full stack Blog Application with Admin CMS" first="https://lawe-portfolio.web.app/img/cartopia.png" second="https://lawe-portfolio.web.app/img/ecom_sosah2.png" third="https://lawe-portfolio.web.app/img/blog_admin.jpg"img="https://lawe-portfolio.web.app/img/cartopia.png" description="Cartopia is a fullstack bloog application featuring a responsive design and an Admin CMS with full CRUD functionality. It allows selected users or authors to be able to edit site features and blog posts. It also features a functional rich text editor to markup the blog posts."/>
 
 
 

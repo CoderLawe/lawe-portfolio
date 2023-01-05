@@ -1,26 +1,29 @@
 import { useContext } from "react";
-import { FirstContext, ModalContext, PostContext, SecondContext, Thirdcontext } from "./context/ClickedContext";
+import { FirstContext, FourthContext, HoveredContext, ModalContext, PostContext, SecondContext, Thirdcontext } from "./context/ClickedContext";
 import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image";
-const Card = ({ title, img, description, link, first, second, third}) => {
+const Card = ({ title, img, description, link, first, second, third, fourth}) => {
 
     const [post, setPost] = useContext(PostContext);
     const [modalOpen, setModalOpen] = useContext(ModalContext)
     const [firstImage, setFirstImage] = useContext(FirstContext)
     const [secondImage, setSecondImage] = useContext(SecondContext)
     const [thirdImage, setThirdImage] = useContext(Thirdcontext)
+    const [fourthImage, setFourthImage] = useContext(FourthContext)
+
+    const [hovered, setHovered] = useContext(HoveredContext);
     const handleClicked = (first, second, third) => {
             setModalOpen(true)
             setFirstImage(first)
             setSecondImage(second)
             setThirdImage(third)
-        
+            setFourthImage(fourth)
 
         console.log('images', firstImage)
     }
     
     return(
-        <div className="group transition-all ease-in-out duration-500 flex-col space-x-4 rounded-2xl shadow-lg lg:w-[350px] relative ">
+        <div onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} className="group transition-all ease-in-out duration-500 flex-col space-x-4 rounded-2xl shadow-lg lg:w-[350px] relative ">
             <div className="cursor-pointer ">
                 <img onClick={() => handleClicked(first, second, third)} className="h-[200px] object-cover group-hover:bg-black group-hover:opacity-75 transition-all duration-500 ease-out" layout="fill" src={img} alt="portfolio-card-cover"/>
                

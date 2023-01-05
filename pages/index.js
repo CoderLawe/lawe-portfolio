@@ -1,20 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useContext, useEffect, useState } from 'react'
-import About from './components/About'
-import Contact from './components/Contact'
-import Introduction from './components/Introduction'
-import Navbar from './components/Navbar'
-import Portfolio from './components/Portfolio'
-import RightSide from './components/RightSide'
-import Skills from './components/Skills'
-import Footer from "./components/Footer";
+import About from '../components/About'
+import Contact from '../components/Contact'
+import Introduction from '../components/Introduction'
+import Navbar from '../components/Navbar'
+import Portfolio from '../components/Portfolio'
+import RightSide from '../components/RightSide'
+import Skills from '../components/Skills'
+import Footer from "../components/Footer";
 import MenuIcon from "@mui/icons-material/Menu";
-import Menu from './components/Menu'
-import { ClickedContext } from './components/context/ClickedContext'
-import Blog from './components/Blog'
-import Preloader from "./components/Preloader";
+import Menu from '../components/Menu'
+import { ClickedContext } from '../components/context/ClickedContext'
+import Blog from '../components/Blog'
+import Preloader from "../components/Preloader";
 import Aos from "aos";
+import NewPortfolio from '../components/NewPortfolio'
 
 const { motion } = require("framer-motion");
 
@@ -70,7 +71,6 @@ const Home = () => {
     <div className="bg-blackishBg h-full">
       <Head>
         <title>Lawe Sosah | Digital Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
         <link rel="icon" href="https://cdn.discordapp.com/attachments/839784544798638090/889140379251802122/download.png"/>
         <meta name="description" content="Lawe Sosah is a freelance web developer with experience in ReactJs/NextJS"/>
         
@@ -81,7 +81,7 @@ const Home = () => {
           <Navbar />
       </nav> */}
       <div className="">
-        <Preloader passed={passed}/>
+        {/* <Preloader passed={passed}/> */}
       </div>
               <div className={clicked ? "flex lg:hidden justify-end  fixed -right-0":"flex lg:hidden justify-end mr-10 pt-5 fixed -right-0"}>
                 <Menu />
@@ -133,6 +133,8 @@ const Home = () => {
               {/* <Skills /> */}
 
               <Portfolio />
+
+              {/* <NewPortfolio /> */}
 
               <Contact />
 
