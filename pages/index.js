@@ -81,7 +81,7 @@ const Home = () => {
           <Navbar />
       </nav> */}
       <div className="">
-        {/* <Preloader passed={passed}/> */}
+        <Preloader passed={passed}/>
       </div>
               <div className={clicked ? "flex lg:hidden justify-end  fixed -right-0":"flex lg:hidden justify-end mr-10 pt-5 fixed -right-0"}>
                 <Menu />
