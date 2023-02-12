@@ -76,7 +76,7 @@ const Home = () => {
           <Navbar />
       </nav> */}
       <div className="">
-        <Preloader passed={false} />
+        <Preloader passed={passed} />
       </div>
       <div
         className={
@@ -90,7 +90,7 @@ const Home = () => {
 
       {/* Temporary coming soon component */}
 
-      {/* <ComingSoon /> */}
+      <ComingSoon />
       {/* Change below className and add lg:flex and remove hidden */}
       <main className="hidden flex-col  ">
         {/* Left Side */}
