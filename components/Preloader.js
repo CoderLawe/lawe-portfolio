@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import BlenderIcon from '@mui/icons-material/Blender'
 import CoffeeIcon from '@mui/icons-material/Coffee'
 import { Typewriter } from 'react-simple-typewriter'
 import CodeIcon from '@mui/icons-material/Code'
 import PencilIcon from '@mui/icons-material/Create'
 import { DotLoader } from 'react-spinners'
+import { LoadedContext } from './context/ClickedContext'
 // import { motion } from "framer-motion";
 const { motion } = require('framer-motion')
 
 function Preloader() {
-  const [loaded, setLoaded] = useState(false)
+  const [loaded, setLoaded] = useContext(LoadedContext)
 
   const resetLoading = () => {
     setLoaded(true)
@@ -24,7 +25,7 @@ function Preloader() {
       className={
         loaded
           ? 'hidden'
-          : ' relative left-0 top-0 z-[60]  flex h-[100vh] w-screen items-center justify-center overflow-hidden bg-black transition-all'
+          : ' relative left-0 top-0 z-[60]  flex h-[100vh] w-screen items-center justify-center  overflow-hidden bg-black transition-all'
       }
     >
       <motion.div

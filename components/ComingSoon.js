@@ -1,8 +1,16 @@
 import { MailOutline } from '@mui/icons-material'
 import Image from 'next/image'
+import { useContext } from 'react'
+import { LoadedContext } from './context/ClickedContext'
+
 const ComingSoon = () => {
+  const [loaded, setLoaded] = useContext(LoadedContext)
   return (
-    <div className="h-screen w-full  justify-between bg-white lg:flex">
+    <div
+      className={
+        loaded ? 'h-screen w-full  justify-between bg-white lg:flex' : 'hidden'
+      }
+    >
       {/* Left side */}
       <div className="flex justify-center lg:block">
         <div className="absolute order-1 h-[40%] w-[90vw] lg:mt-[99px] lg:h-[435px] lg:w-[610px]">
