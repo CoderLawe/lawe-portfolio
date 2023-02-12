@@ -18,7 +18,7 @@ const ComingSoon = () => {
       {/* Right side */}
 
       <div className="mx-32 flex justify-center lg:block">
-        <div className="mt-[300px] block space-y-[10px] lg:mt-[130px]  lg:mr-[90px]">
+        <div className="mt-[250px] block space-y-[10px] lg:mt-[130px]  lg:mr-[90px]">
           <div className="hidden space-y-[10px] lg:block lg:w-[400px]">
             <div className="">
               <p className="text-center font-serif text-[24px] text-gray-700">
@@ -28,14 +28,23 @@ const ComingSoon = () => {
             </div>
             <p className="font-Cormorant text-[22px] leading-[32px] text-gray-700">
               I'm currently doing minor fixes to the site for a more immersive
-              experience(A 3D website). Trust me... it will be worth the wait
+              experience(A 3D experience). Trust me... it will be worth the wait
             </p>
           </div>
 
-          <div className="relative -top-[10px] flex w-[80vw] lg:hidden">
+          {/* Small screen */}
+
+          <div className="lg:hidden">
+            <p className="text-center font-serif text-[18px] text-gray-700">
+              {' '}
+              Renovations in progress!
+            </p>
+          </div>
+
+          <div className="relative -top-[10px] mx-[24px] flex justify-center lg:hidden">
             <p className="text-center font-Cormorant text-[18px] leading-[32px] text-black">
-              I'm currently doing minor renovations to deliver a better user
-              experience
+              I'm currently doing minor fixes to the site for a more immersive
+              experience(A 3D experience). Trust me... it will be worth the wait
             </p>
           </div>
 
