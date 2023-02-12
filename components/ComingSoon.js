@@ -1,10 +1,56 @@
+import { send } from 'emailjs-com'
 import { MailOutline } from '@mui/icons-material'
 import Image from 'next/image'
-import { useContext } from 'react'
+import { useContext, useState, forwardRef } from 'react'
 import { LoadedContext } from './context/ClickedContext'
+import Snackbar from '@mui/material/Snackbar'
+import MuiAlert from '@mui/material/Alert'
+
+const Alert = forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
+})
 
 const ComingSoon = () => {
   const [loaded, setLoaded] = useContext(LoadedContext)
+
+  const [toSend, setToSend] = useState({
+    from_name: '',
+    message: '',
+    reply_to: '',
+  })
+
+  const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    setOpen(true)
+  }
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return
+    }
+
+    setOpen(false)
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    send('service_kv6g78p', 'template_adq07to', toSend, 'OsrgV26KCnzNX1gPf')
+      .then((response) => {
+        console.log('Success!', response)
+      })
+      .catch((err) => {
+        console.log('Yeah it failed...', err)
+      })
+
+    setToSend({ from_name: '', message: '', reply_to: '' })
+    setOpen(true)
+  }
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value })
+  }
+
   return (
     <div
       className={
@@ -60,24 +106,37 @@ const ComingSoon = () => {
             <div className="mt-[70px] block ">
               <div className="flex space-x-[10px]">
                 <input
+                  value={toSend.from_name}
+                  onChange={handleChange}
+                  name="from_name"
                   className="rounded-[8px] border border-[#6C63FF] px-[14px] py-[6px] font-Cormorant"
                   placeholder="First name"
                 />
                 <input
+                  name="reply_to"
+                  value={toSend.reply_to}
+                  onChange={handleChange}
                   className="rounded-[8px] border border-[#6C63FF] px-[14px] py-[6px] font-Cormorant"
-                  placeholder="Last name"
+                  placeholder="Email address"
+                  type="email"
                 />
               </div>
             </div>
             <div className="mt-[30px]">
               <textarea
+                name="message"
+                value={toSend.message}
+                onChange={handleChange}
                 className="h-[100px] w-full rounded-[8px] border border-[#6C63FF] px-[14px] pt-[8px] font-Cormorant"
                 placeholder="Leave me a message here"
               />
             </div>
 
             <div className="group mt-[10px] flex cursor-pointer items-center justify-center transition-all duration-500 ease-linear">
-              <MailOutline className="cursor-pointer text-[35px] text-[#6C63FF]" />
+              <MailOutline
+                onClick={onSubmit}
+                className="cursor-pointer text-[35px] text-[#6C63FF]"
+              />
               <p className="ml-[5px] hidden font-Cormorant text-[14px] text-[#6C63FF]  group-hover:flex">
                 Send
               </p>
