@@ -11,7 +11,10 @@ import Skills from '../components/Skills'
 import Footer from '../components/Footer'
 import MenuIcon from '@mui/icons-material/Menu'
 import Menu from '../components/Menu'
-import { ClickedContext } from '../components/context/ClickedContext'
+import {
+  ClickedContext,
+  LoadedContext,
+} from '../components/context/ClickedContext'
 import Blog from '../components/Blog'
 import Preloader from '../components/Preloader'
 import Aos from 'aos'
@@ -24,7 +27,7 @@ const Home = () => {
   const [scrolled, setScrolled] = useState(false)
   const [clicked, setClicked] = useContext(ClickedContext)
   const [passed, setPassed] = useState(false)
-
+  const [loaded, setLoaded] = useContext(LoadedContext)
   const moveNav = () => {
     if (window.scrollY > 120) {
       setScrolled(true)
@@ -90,9 +93,9 @@ const Home = () => {
 
       {/* Temporary coming soon component */}
 
-      <ComingSoon />
+      {/* <ComingSoon /> */}
       {/* Change below className and add lg:flex and remove hidden */}
-      <main className="hidden flex-col  ">
+      <main className={loaded ? 'flex-col lg:flex  ' : 'hidden'}>
         {/* Left Side */}
 
         <motion.div
@@ -115,10 +118,12 @@ const Home = () => {
           }
         >
           <div className="">
+            {/* Small screen right side */}
             <div className="flex justify-center lg:hidden ">
               <RightSide />
             </div>
             <Introduction />
+            <Portfolio />
 
             <About />
 
@@ -126,12 +131,13 @@ const Home = () => {
 
             <div className="flex  w-full  lg:mx-12 lg:pl-0">
               <div className="flex-col space-y-2 ">
-                <h2 className="ml-3 font-Cormorant text-[50px] font-light text-gray-400">
-                  <span className="text-headerYellow">Tailor Made</span>{' '}
-                  Solutions
+                <h2 className="ml-3 font-Cormorant text-[50px] font-light text-gray-400 ">
+                  Tailor Made Solutions
                 </h2>
-                <div className="px-5 lg:w-[80%] lg:px-0">
-                  <p className="my-10 font-Cormorant text-[25px] font-light leading-10 text-paragraphGray lg:text-[30px]">
+                <div className="h-[0.11rem] w-[200px] bg-gray-500" />
+
+                <div className="ml-6 px-5 lg:w-[80%] lg:px-0">
+                  <p className="font-Cormorant text-[25px] font-light leading-[50px] text-paragraphGray lg:text-[30px]">
                     Whether it's a simple landing page or an admin dashboard,
                     all my services are fully customizable and tailor made to
                     suit you
@@ -143,8 +149,6 @@ const Home = () => {
             {/* Right side */}
             <div></div>
             {/* <Skills /> */}
-
-            <Portfolio />
 
             {/* <NewPortfolio /> */}
 
@@ -171,6 +175,7 @@ const Home = () => {
           <div className="block">
             <Navbar />
 
+            {/* Large screen right side */}
             <div className="hidden lg:flex">
               <RightSide scrolled={scrolled} />
             </div>
