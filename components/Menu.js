@@ -19,9 +19,12 @@ const Menu = () => {
         'relative z-50 bg-blackishBg transition-all duration-500 ease-out '
       }
     >
-      {/* Uncomment line below */}
-      {/* <MenuIcon onClick={() => setClicked(true)} className={clicked ? "hidden": "flex h-12 w-12 cursor-pointer text-gray-400"}/> */}
-
+      <MenuIcon
+        onClick={() => setClicked(true)}
+        className={
+          clicked ? 'hidden' : 'flex h-12 w-12 cursor-pointer text-gray-400'
+        }
+      />
       <div
         className={
           clicked
