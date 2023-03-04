@@ -151,7 +151,7 @@ const Portfolio = () => {
           data-aos="fade-in"
           data-aos-duration="3000"
           title="Kona Equity Premium Page Redesign"
-          description="This was a frontend intensive  redesign of Kona Equity's existing landing page. It was built with the aim of boosting conversions. It makes use of glassmorphism, gradients and unique colours to produce a truly unique browsing experience.  "
+          description="This project was a redesign of Kona Equity's premium page with the aim of boosting paying conversions. Together with a talented designer, I implemented this design with NextJS and TailwindCSS. There was a 25% increase in sales within the first month alone!"
           link="https://konaequity.com/premium"
           img="https://cdn.discordapp.com/attachments/817048198022430761/1056661734913474640/Screen_Shot_2022-12-24_at_7.22.38_PM.png"
           first="https://cdn.discordapp.com/attachments/839784544798638090/1056301485123702835/Screen_Shot_2022-12-24_at_7.31.23_PM.png"
@@ -168,6 +168,16 @@ const Portfolio = () => {
           description="Fully responsive Smoothie bar landing page with unique UI features. This was built in NextJS with TailwindCSS and Typescript. It also includes several animations using framer-motion, a lightweight animation library."
         />
         <Card
+          link="https://lawe.pythonanywhere.com"
+          first="https://lawe-portfolio.web.app/img/ecom_detailpage.png"
+          second="https://lawe-portfolio.web.app/img/ecom_admin.png"
+          third="https://lawe-portfolio.web.app/img/ecom_cover.png"
+          title="Ecommerce WebApp with Python and Django"
+          img="https://lawe-portfolio.web.app/img/ecom_cover.png"
+          description="This django build was a full stack ecommerce platform, that was to be implemented by a local busieness. It features a neat UI, Paypal payment integration, a blog, the ability to add reviews, a fully built Admin console/CRM, and loads of other features."
+        />
+
+        <Card
           link=" https://bites-on-the-double.vercel.app/"
           first="https://cdn.discordapp.com/attachments/817048198022430761/912216484665782282/Screen_Shot_2021-11-22_at_7.31.14_AM.png"
           second="https://cdn.discordapp.com/attachments/817048198022430761/912216484963549234/Screen_Shot_2021-11-22_at_7.30.40_AM.png"
@@ -176,14 +186,14 @@ const Portfolio = () => {
           img="https://cdn.discordapp.com/attachments/817048198022430761/912216484963549234/Screen_Shot_2021-11-22_at_7.30.40_AM.png"
           description="I built this Restaurant app with NextJS TailwindCSS, and JSON server for the backend CMS. I was mostly experimenting with several animation libraries, and ways of making a CMS."
         />
+
         <Card
-          link="https://lawe.pythonanywhere.com"
-          first="https://lawe-portfolio.web.app/img/ecom_detailpage.png"
-          second="https://lawe-portfolio.web.app/img/ecom_admin.png"
-          third="https://lawe-portfolio.web.app/img/ecom_cover.png"
-          title="Ecommerce WebApp with Python and Django"
-          img="https://lawe-portfolio.web.app/img/ecom_cover.png"
-          description="This was definitely one of my most complicated builds to date. It features a neat UI, Paypal payment integration, a blog, the ability to add reviews, a fully built Admin console/CRM, and loads of other features. This is without doubt the project that has taught me the most about django"
+          title="Full stack Blog Application with Admin CMS"
+          first="https://lawe-portfolio.web.app/img/cartopia.png"
+          second="https://lawe-portfolio.web.app/img/ecom_sosah2.png"
+          third="https://lawe-portfolio.web.app/img/blog_admin.jpg"
+          img="https://lawe-portfolio.web.app/img/cartopia.png"
+          description="Cartopia is a fullstack bloog application featuring a responsive design and an Admin CMS with full CRUD functionality. It allows selected users or authors to be able to edit site features and blog posts. It also features a functional rich text editor to markup the blog posts."
         />
 
         <Card
@@ -216,14 +226,6 @@ const Portfolio = () => {
         />
 
         {/* <Card title="Netflix Clone with ReactJS, and the TMDB movie API" img="https://cdn.discordapp.com/attachments/817048198022430761/872201898424401960/Screen_Shot_2021-08-03_at_10.38.30_PM.png" description="This is an Netflix Clone built with React and with data from TMDB. I learned a lot about CSS and flex box from this build specifically" /> */}
-        <Card
-          title="Full stack Blog Application with Admin CMS"
-          first="https://lawe-portfolio.web.app/img/cartopia.png"
-          second="https://lawe-portfolio.web.app/img/ecom_sosah2.png"
-          third="https://lawe-portfolio.web.app/img/blog_admin.jpg"
-          img="https://lawe-portfolio.web.app/img/cartopia.png"
-          description="Cartopia is a fullstack bloog application featuring a responsive design and an Admin CMS with full CRUD functionality. It allows selected users or authors to be able to edit site features and blog posts. It also features a functional rich text editor to markup the blog posts."
-        />
       </div>
     </div>
   )
