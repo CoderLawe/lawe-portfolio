@@ -188,12 +188,13 @@ const Portfolio = () => {
         />
 
         <Card
+          link="https://lawe.pythonanywhere.com"
           title="Full stack Blog Application with Admin CMS"
           first="https://lawe-portfolio.web.app/img/cartopia.png"
           second="https://lawe-portfolio.web.app/img/ecom_sosah2.png"
           third="https://lawe-portfolio.web.app/img/blog_admin.jpg"
           img="https://lawe-portfolio.web.app/img/cartopia.png"
-          description="Cartopia is a fullstack bloog application featuring a responsive design and an Admin CMS with full CRUD functionality. It allows selected users or authors to be able to edit site features and blog posts. It also features a functional rich text editor to markup the blog posts."
+          description="Cartopia is a fullstack blog application featuring a responsive design and an Admin CMS with full CRUD functionality. It allows selected users or authors to be able to edit site features and blog posts. It also features a functional rich text editor to markup the blog posts."
         />
 
         <Card
