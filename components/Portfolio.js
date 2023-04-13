@@ -159,6 +159,32 @@ const Portfolio = () => {
           third="https://cdn.discordapp.com/attachments/839784544798638090/1056301485752856676/Screen_Shot_2022-12-24_at_7.30.49_PM.png"
           fourth="https://cdn.discordapp.com/attachments/817048198022430761/1056652095169773568/kona-3.png"
         />
+
+        <Card
+          link="https://medium.com/@sosahlawe/build-a-real-time-flight-tracker-with-nextjs-tailwindcss-and-react-map-gl-a-step-by-step-d480d053052c"
+          img="https://cdn.discordapp.com/attachments/839784544798638090/1096041452691259434/Screen_Shot_2023-04-11_at_3.40.11_AM.png"
+          title="Realtime Flight Tracker web app"
+          description="November Romeo is a web application that tracks commercial flights in real-time using data from the OpenSky Network API. The app displays a world map that updates flight positions every five seconds. The map is built using Mapbox GL JS, and the application is built using React and Next.js.
+
+        Users can interact with the map by dragging and zooming to view flights from different regions. The app uses the onMoveEnd event listener to detect when the user has stopped moving the map for 5 seconds before updating flight data to reduce the number of requests being made.
+        
+        The flight data is fetched from a JSON file containing airport information stored in the project root directory. Each flight is represented as a marker on the map, and clicking on a marker displays the flight's departure and arrival airport, flight number, and altitude.
+        
+        This project is useful for aviation enthusiasts, travelers, and anyone interested in tracking flights in real-time. It demonstrates the use of popular web development frameworks and APIs to create a modern, interactive, and responsive web application."
+          first="https://cdn.discordapp.com/attachments/839784544798638090/1093161085865046066/Screen_Shot_2023-04-05_at_3.11.16_PM.png"
+          second="https://cdn.discordapp.com/attachments/839784544798638090/1093160143946006680/Screen_Shot_2023-04-05_at_3.07.36_PM.png"
+          third="https://cdn.discordapp.com/attachments/839784544798638090/1093163648182124584/Screenshot_20230405-152038.jpg"
+        />
+
+        <Card
+          link=" https://bites-on-the-double.vercel.app/"
+          first="https://cdn.discordapp.com/attachments/817048198022430761/912216484665782282/Screen_Shot_2021-11-22_at_7.31.14_AM.png"
+          second="https://cdn.discordapp.com/attachments/817048198022430761/912216484963549234/Screen_Shot_2021-11-22_at_7.30.40_AM.png"
+          third="https://cdn.discordapp.com/attachments/817048198022430761/912216981946638376/Screen_Shot_2021-11-22_at_7.40.04_AM.png"
+          title="Restaurant App with API and admin CMS"
+          img="https://cdn.discordapp.com/attachments/817048198022430761/912216484963549234/Screen_Shot_2021-11-22_at_7.30.40_AM.png"
+          description="I built this Restaurant app with NextJS TailwindCSS. The app features an in-built CMS built in NodeJS and Express. It demonstrates different animation libraries and several backend and frontend tools."
+        />
         <Card
           link="https://juice-bar-nextjs.vercel.app"
           img="https://cdn.discordapp.com/attachments/817048198022430761/1030413859296661515/Juice-bar.png"
@@ -175,16 +201,6 @@ const Portfolio = () => {
           title="Ecommerce WebApp with Python and Django"
           img="https://lawe-portfolio.web.app/img/ecom_cover.png"
           description="This django build was a full stack ecommerce platform, that was to be implemented by a local busieness. It features a neat UI, Paypal payment integration, a blog, the ability to add reviews, a fully built Admin console/CRM, and loads of other features."
-        />
-
-        <Card
-          link=" https://bites-on-the-double.vercel.app/"
-          first="https://cdn.discordapp.com/attachments/817048198022430761/912216484665782282/Screen_Shot_2021-11-22_at_7.31.14_AM.png"
-          second="https://cdn.discordapp.com/attachments/817048198022430761/912216484963549234/Screen_Shot_2021-11-22_at_7.30.40_AM.png"
-          third="https://cdn.discordapp.com/attachments/817048198022430761/912216981946638376/Screen_Shot_2021-11-22_at_7.40.04_AM.png"
-          title="Restaurant App with API and admin CMS"
-          img="https://cdn.discordapp.com/attachments/817048198022430761/912216484963549234/Screen_Shot_2021-11-22_at_7.30.40_AM.png"
-          description="I built this Restaurant app with NextJS TailwindCSS, and JSON server for the backend CMS. I was mostly experimenting with several animation libraries, and ways of making a CMS."
         />
 
         <Card
