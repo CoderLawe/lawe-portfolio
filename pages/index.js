@@ -78,9 +78,7 @@ const Home = () => {
       <nav className='fixed -right-0 mr-32'>
           <Navbar />
       </nav> */}
-      <div className="">
-        <Preloader passed={passed} />
-      </div>
+      <div className="">{/* <Preloader passed={passed} /> */}</div>
       <div
         className={
           clicked
