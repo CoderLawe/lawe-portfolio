@@ -93,7 +93,8 @@ const Home = () => {
 
       {/* <ComingSoon /> */}
       {/* Change below className and add lg:flex and remove hidden */}
-      <main className={loaded ? 'flex-col lg:flex  ' : 'hidden'}>
+      {/* <main className={loaded ? 'flex-col lg:flex  ' : 'hidden'}> */}
+      <main className="flex-col lg:flex">
         {/* Left Side */}
 
         <motion.div

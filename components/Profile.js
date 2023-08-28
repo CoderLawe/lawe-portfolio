@@ -30,7 +30,7 @@ const Profile = ({ scrolled }) => {
       }}
       transition={{
         duration: 2,
-        delay: 11.5,
+        // delay: 11.5,
       }}
     >
       <div

@@ -19,7 +19,7 @@ const Introduction = () => {
       }}
       transition={{
         duration: 2,
-        delay: 11,
+        // delay: 11,
       }}
       id="home"
       data-aos="fade-in"
