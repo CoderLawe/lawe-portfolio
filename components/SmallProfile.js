@@ -27,7 +27,7 @@ function SmallProfile({ scrolled }) {
       }}
       transition={{
         duration: 2,
-        delay: 11.5,
+        // delay: 11.5,
       }}
     >
       <div className="mx-[7.5] mt-[70px] h-[520px] w-[320px] border border-gray-500 px-8 py-10 lg:mx-[15%] lg:mt-20 lg:h-[580px] lg:px-10 ">
