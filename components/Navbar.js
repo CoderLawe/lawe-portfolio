@@ -18,7 +18,7 @@ const Navbar = () => {
       }}
       transition={{
         duration: 2,
-        delay: 12,
+        delay: 5,
       }}
     >
       {/* Large screen navbar */}
