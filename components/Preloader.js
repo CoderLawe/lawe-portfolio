@@ -22,11 +22,15 @@ function Preloader() {
   }, [])
   return (
     <div
-      className={
-        loaded
-          ? 'hidden'
-          : ' relative left-0 top-0 z-[60]  flex h-[100vh] w-screen items-center justify-center  overflow-hidden bg-black transition-all'
-      }
+      // Uncomment className when typewriter is fixed. Use Framer Instead?
+
+      // className={
+      //   loaded
+      //     ? 'hidden'
+      //     : ' relative left-0 top-0 z-[60]  flex h-[100vh] w-screen items-center justify-center  overflow-hidden bg-black transition-all'
+      // }
+
+      className="relative left-0 top-0 z-[60]  flex h-[100vh] w-screen items-center justify-center  overflow-hidden bg-black transition-all"
     >
       <motion.div
         initial={{

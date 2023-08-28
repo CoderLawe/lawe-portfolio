@@ -107,7 +107,7 @@ const Home = () => {
           }}
           transition={{
             duration: 2,
-            delay: 12,
+            // delay: 12,
           }}
           className={
             scrolled
