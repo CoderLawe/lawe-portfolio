@@ -36,19 +36,19 @@ const Profile = ({ scrolled }) => {
       <div
         className={
           scrolled
-            ? 'mx-[7.5] mt-10 w-[350px] border border-t border-gray-500 px-8 py-10 lg:mx-[15%] lg:mt-20 lg:h-[580px] lg:px-10  '
-            : 'mt-20 w-[350px] border border-gray-500 px-8 py-10 lg:ml-[12.5%] lg:h-[600px] lg:w-[400px] lg:px-10 '
+            ? 'mx-[7.5] mt-10 w-[350px] border border-t border-gray-500 px-8 py-10 lg:mx-[15%] lg:mt-20 lg:h-[480px] lg:px-10  '
+            : 'mt-20 w-[350px] border border-gray-500 px-8 py-10 lg:ml-[12.5%] lg:h-[510px] lg:w-[400px] lg:px-10 '
         }
       >
-        <img
+        <Image
           className={
             scrolled
-              ? 'h-[320px] bg-cover object-contain lg:w-[300px] '
-              : 'h-[320px] w-[350px] bg-cover'
+              ? ' bg-cover object-contain lg:w-[300px] '
+              : ' w-[350px] bg-cover'
           }
           src="https://cdn.discordapp.com/attachments/839784544798638090/1074610213111480320/profile-pic_3.png"
-          height={450}
-          width={350}
+          height={320}
+          width={340}
           objectFit="cover"
         />
 

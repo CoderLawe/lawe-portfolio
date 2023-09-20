@@ -34,7 +34,7 @@ function SmallProfile({ scrolled }) {
         <Image
           className="h-[320px] bg-cover object-contain lg:w-[300px] "
           src="https://cdn.discordapp.com/attachments/839784544798638090/1074610213111480320/profile-pic_3.png"
-          height={450}
+          height={350}
           width={350}
           objectFit="cover"
         />
