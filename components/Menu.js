@@ -46,9 +46,9 @@ const Menu = () => {
             duration={1000}
             onClick={closeSesame}
           >
-            <h3 className="py-5 font-serif text-xl text-gray-400 transition-all duration-500 ease-out hover:text-headerYellow ">
+            <p className="py-5 font-serif text-xl text-gray-400 transition-all duration-500 ease-out hover:text-headerYellow ">
               HOME
-            </h3>
+            </p>
           </Link>
 
           <Link
@@ -59,9 +59,9 @@ const Menu = () => {
             duration={1000}
             onClick={closeSesame}
           >
-            <h3 className="py-5 font-serif text-xl text-gray-400 transition-all duration-500 ease-out hover:text-headerYellow">
+            <p className="py-5 font-serif text-xl text-gray-400 transition-all duration-500 ease-out hover:text-headerYellow">
               ABOUT
-            </h3>
+            </p>
           </Link>
 
           <Link
@@ -72,9 +72,9 @@ const Menu = () => {
             duration={1000}
             onClick={closeSesame}
           >
-            <h3 className="py-5 font-serif text-xl text-gray-400 transition-all duration-500 ease-out hover:text-headerYellow">
+            <p className="py-5 font-serif text-xl text-gray-400 transition-all duration-500 ease-out hover:text-headerYellow">
               PORTFOLIO
-            </h3>
+            </p>
           </Link>
 
           <Link
@@ -85,9 +85,9 @@ const Menu = () => {
             duration={1000}
             onClick={closeSesame}
           >
-            <h3 className="py-5 font-serif text-xl text-gray-400 transition-all duration-500 ease-out hover:text-headerYellow">
+            <p className="py-5 font-serif text-xl text-gray-400 transition-all duration-500 ease-out hover:text-headerYellow">
               CONTACT
-            </h3>
+            </p>
           </Link>
 
           <div className="mt-16 flex space-x-8">
