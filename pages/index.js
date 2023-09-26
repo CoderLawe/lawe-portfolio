@@ -98,18 +98,6 @@ const Home = () => {
         {/* Left Side */}
 
         <motion.div
-          initial={{
-            opacity: 0,
-            x: -200,
-          }}
-          animate={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 2,
-            // delay: 12,
-          }}
           className={
             scrolled
               ? 'order-2 border-gray-500  transition-all duration-500 ease-in-out sm:order-1  lg:w-[65%] lg:border-r '

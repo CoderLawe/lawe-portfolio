@@ -32,6 +32,7 @@ const Profile = ({ scrolled }) => {
         duration: 2,
         // delay: 11.5,
       }}
+      className="hidden lg:flex"
     >
       <div
         className={

@@ -16,7 +16,7 @@ const { motion } = require('framer-motion')
 
 function SmallProfile({ scrolled }) {
   return (
-    <motion.div
+    <div
       initial={{
         opacity: 0,
       }}
@@ -24,7 +24,7 @@ function SmallProfile({ scrolled }) {
         opacity: 1,
       }}
       transition={{
-        duration: 2,
+        duration: 0.5,
         // delay: 11.5,
       }}
     >
@@ -58,7 +58,7 @@ function SmallProfile({ scrolled }) {
           <GitHubIcon className="h-12 cursor-pointer text-headerYellow" />
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

@@ -35,12 +35,14 @@ const About = () => {
       </p>
 
       <div className="mx-auto flex justify-center ">
-        <div className="  flex cursor-pointer items-center  space-x-2 rounded-xl border border-white bg-transparent px-10 py-[12px] text-white transition-all duration-500 ease-in-out hover:bg-gray-200 hover:text-black">
-          <a href="/" target="_blank">
-            <FileDownloadIcon className="h-12 w-12" />
-          </a>
+        <a
+          href="https://drive.google.com/file/d/1Pa_ZDjIY6h7OmD7pGykb3syt6I-jrzu2/view?usp=sharing"
+          target="_blank"
+          className="  flex cursor-pointer items-center  space-x-2 rounded-xl border border-white bg-transparent px-10 py-[12px] text-white transition-all duration-500 ease-in-out hover:bg-gray-200 hover:text-black"
+        >
+          <FileDownloadIcon className="h-12 w-12" />
           <p className="cursor-pointer">Download My Resume</p>
-        </div>
+        </a>
       </div>
     </div>
   )

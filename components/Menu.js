@@ -15,8 +15,7 @@ const Menu = () => {
   return (
     <nav
       className={
-        clicked &&
-        'relative z-50 bg-blackishBg transition-all duration-500 ease-out '
+        clicked && 'relative z-50 bg-white transition-all duration-500 ease-out'
       }
     >
       <MenuIcon
@@ -28,7 +27,7 @@ const Menu = () => {
       <div
         className={
           clicked
-            ? 'flex  h-screen w-screen cursor-pointer   justify-center bg-blackishBg'
+            ? 'z-50  flex h-screen w-screen cursor-pointer  justify-center bg-blackishBg'
             : 'hidden'
         }
       >
@@ -37,7 +36,7 @@ const Menu = () => {
           className="mt-5  h-10 w-10 text-gray-400 "
         />
 
-        <div className="mt-32 flex-col space-y-12 align-middle">
+        <div className="mt-32 flex-col space-y-12 bg-blackishBg align-middle">
           <Link
             activeClass="text-headerYellow"
             to="home"
