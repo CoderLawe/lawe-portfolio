@@ -11,6 +11,7 @@ import Skills from '../components/Skills'
 import Footer from '../components/Footer'
 import MenuIcon from '@mui/icons-material/Menu'
 import Menu from '../components/Menu'
+import HandwritingPreloader from '../components/HandwritingPreloader'
 import {
   ClickedContext,
   LoadedContext,
@@ -78,7 +79,10 @@ const Home = () => {
       <nav className='fixed -right-0 mr-32'>
           <Navbar />
       </nav> */}
-      <div className="">{/* <Preloader passed={passed} /> */}</div>
+      <div className="">
+        {' '}
+        <Preloader passed={passed} />{' '}
+      </div>
       <div
         className={
           clicked

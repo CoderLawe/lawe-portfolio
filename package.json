@@ -25,7 +25,8 @@
     "react-simple-typewriter": "^4.0.5",
     "react-spinners": "^0.13.8",
     "react-spring": "^9.5.4",
-    "typewriter-effect": "^2.19.0"
+    "typewriter-effect": "^2.19.0",
+    "vara": "^1.4.1"
   },
   "devDependencies": {
     "@types/node": "17.0.4",

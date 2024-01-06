@@ -1,10 +1,21 @@
 import React from 'react'
 import { Carousel } from "react-responsive-carousel"
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 function PortfolioCarousel() {
   return (
-    <Carousel>
+    <div className="flex justify-center">
+        <div className="block">
+            {/* Image */}
+            <div>
+                
+            </div>
 
-    </Carousel>
+            {/* Description */}
+
+            <div></div>
+        </div>
+    </div>
 
   )
 }
