@@ -9,14 +9,15 @@ export default function VaraText() {
         [
           {
             text: "Lawe Sosah",
-            fontSize: 70,
+            fontSize: 60,
             strokeWidth: 0.7,
             color:"white",
+          
             // textAlign:center
           },
         ]
       );
     }, []);
   
-    return <div id="vara-container" className="z-[20] w-[450px]"></div>;
+    return <div id="vara-container" className="z-[20] w-[450px] whitespace-nowrap"></div>;
   }
