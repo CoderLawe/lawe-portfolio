@@ -25,13 +25,13 @@ function Preloader() {
     <div
       // Uncomment className when typewriter is fixed. Use Framer Instead?
 
-      // className={
-      //   loaded
-      //     ? 'hidden'
-      //     : ' relative left-0 top-0 z-[60]  flex h-[100vh] w-screen items-center justify-center  overflow-hidden bg-black transition-all'
-      // }
+      className={
+        loaded
+          ? 'hidden'
+          : ' relative left-0 top-0 z-[60]  flex h-[100vh] w-screen items-center justify-center  overflow-hidden bg-black transition-all'
+      }
 
-      className="relative z-[60] mx-auto flex h-[100vh] w-[100%] items-center justify-center  overflow-hidden overscroll-none bg-black transition-all"
+      // className="relative z-[60] mx-auto flex h-[100vh] w-[100%] items-center justify-center  overflow-hidden overscroll-none bg-black transition-all"
     >
       <HandwritingPreloader />
     </div>
