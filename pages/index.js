@@ -63,7 +63,7 @@ const Home = () => {
   })
 
   return (
-    <div className="h-full bg-blackishBg">
+    <div className="h-full  bg-blackishBg">
       <Head>
         <title>Lawe Sosah | Digital Portfolio</title>
         <link
@@ -98,14 +98,20 @@ const Home = () => {
       {/* <ComingSoon /> */}
       {/* Change below className and add lg:flex and remove hidden */}
       {/* <main className={loaded ? 'flex-col lg:flex  ' : 'hidden'}> */}
-      <main className="flex-col lg:flex">
+      <main
+        className={
+          loaded
+            ? 'flex-col transition-all duration-300 ease-in lg:flex'
+            : 'hidden'
+        }
+      >
         {/* Left Side */}
 
         <motion.div
           className={
             scrolled
               ? 'order-2 border-gray-500  transition-all duration-500 ease-in-out sm:order-1  lg:w-[65%] lg:border-r '
-              : 'order-2 border-gray-500 sm:order-1  lg:w-[60%] lg:border-r'
+              : 'order-2 border-gray-500 transition-all  duration-500 sm:order-1 lg:w-[60%] lg:border-r'
           }
         >
           <div className="">
