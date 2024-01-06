@@ -18,7 +18,7 @@ function Preloader() {
   }
 
   useEffect(() => {
-    const timer = setTimeout(() => resetLoading(), 5000)
+    const timer = setTimeout(() => resetLoading(), 3000)
     return () => clearTimeout(timer)
   }, [])
   return (
