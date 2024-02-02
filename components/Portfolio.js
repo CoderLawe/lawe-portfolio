@@ -95,7 +95,11 @@ const Portfolio = () => {
 
             <div className="relative h-[300px] w-[1/2]">
               <Image
-                src={thirdImage}
+                src={
+                  thirdImage
+                    ? thirdImage
+                    : 'https://cdn.discordapp.com/attachments/1160095645747662948/1203072330369343488/istockphoto-1222357475-612x612.jpeg?ex=65cfc36b&is=65bd4e6b&hm=d734d2079f555bb1e7a58cbbdbdbde7009456291fbc3ed693936044adaf70ed9&'
+                }
                 layout="fill"
                 alt="first image"
                 objectFit="cover"
@@ -124,16 +128,40 @@ const Portfolio = () => {
             </div>
 
             <div className="relative h-[150px] w-[150px] ">
-              <Image src={secondImage} layout="fill" objectFit="cover" />
+              <Image
+                src={
+                  secondImage
+                    ? secondImage
+                    : 'https://cdn.discordapp.com/attachments/1160095645747662948/1203072330369343488/istockphoto-1222357475-612x612.jpeg?ex=65cfc36b&is=65bd4e6b&hm=d734d2079f555bb1e7a58cbbdbdbde7009456291fbc3ed693936044adaf70ed9&'
+                }
+                layout="fill"
+                objectFit="cover"
+              />
             </div>
 
             <div className="relative h-[150px] w-[1/2] ">
-              <Image src={thirdImage} layout="fill" objectFit="cover" />
+              <Image
+                src={
+                  thirdImage
+                    ? thirdImage
+                    : 'https://cdn.discordapp.com/attachments/1160095645747662948/1203072330369343488/istockphoto-1222357475-612x612.jpeg?ex=65cfc36b&is=65bd4e6b&hm=d734d2079f555bb1e7a58cbbdbdbde7009456291fbc3ed693936044adaf70ed9&'
+                }
+                layout="fill"
+                objectFit="cover"
+              />
             </div>
 
             {fourthImage && (
               <div className="relative h-[150px] w-[1/2] ">
-                <Image src={fourthImage} layout="fill" objectFit="cover" />
+                <Image
+                  src={
+                    fourthImage
+                      ? fourthImage
+                      : 'https://cdn.discordapp.com/attachments/1160095645747662948/1203072330369343488/istockphoto-1222357475-612x612.jpeg?ex=65cfc36b&is=65bd4e6b&hm=d734d2079f555bb1e7a58cbbdbdbde7009456291fbc3ed693936044adaf70ed9&'
+                  }
+                  layout="fill"
+                  objectFit="cover"
+                />
               </div>
             )}
           </div>
@@ -172,6 +200,14 @@ const Portfolio = () => {
           third="https://cdn.discordapp.com/attachments/839784544798638090/1093163648182124584/Screenshot_20230405-152038.jpg"
         />
 
+        <Card
+          link=""
+          first="https://cdn.discordapp.com/attachments/1160095645747662948/1203070445231018054/Screen_Shot_2024-02-02_at_10.11.18_PM.png?ex=65cfc1aa&is=65bd4caa&hm=73d9cb72333e1fdb973a411162d6ff4d4a11aa249d99d9d32946dc7fae871b4f&"
+          second="https://cdn.discordapp.com/attachments/1160095645747662948/1203070445612568678/Screen_Shot_2024-02-02_at_10.10.55_PM.png?ex=65cfc1aa&is=65bd4caa&hm=d12d5ba226411e318898221ca40e451ce0e51b001816c4b626e24557877e2d51&"
+          title="Headless Content Management System with MERN Stack"
+          img="https://cdn.discordapp.com/attachments/1160095645747662948/1203070445231018054/Screen_Shot_2024-02-02_at_10.11.18_PM.png?ex=65cfc1aa&is=65bd4caa&hm=73d9cb72333e1fdb973a411162d6ff4d4a11aa249d99d9d32946dc7fae871b4f&"
+          description="This is a fullstack Headless CMS that I built to help manage personal projects and client projects. I built it with the intention of being fully plug and play...to be able to connect and manage content on React/NextJS projects. I chose to make one instead of using an existing one like Wordpress in order to cover my specific needs as a developer"
+        />
         <Card
           link=" https://bites-on-the-double.vercel.app/"
           first="https://cdn.discordapp.com/attachments/817048198022430761/912216484665782282/Screen_Shot_2021-11-22_at_7.31.14_AM.png"
