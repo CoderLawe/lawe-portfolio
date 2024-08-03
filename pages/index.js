@@ -100,9 +100,9 @@ const Home = () => {
       {/* <main className={loaded ? 'flex-col lg:flex  ' : 'hidden'}> */}
       <main
         className={
-          loaded
-            ? 'flex-col transition-all duration-300 ease-in lg:flex'
-            : 'hidden'
+          // loaded
+          'flex-col transition-all duration-300 ease-in lg:flex'
+          // : 'hidden'
         }
       >
         {/* Left Side */}

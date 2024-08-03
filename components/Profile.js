@@ -47,7 +47,7 @@ const Profile = ({ scrolled }) => {
               ? ' bg-cover object-contain lg:w-[300px] '
               : ' w-[350px] bg-cover'
           }
-          src="https://cdn.discordapp.com/attachments/839784544798638090/1074610213111480320/profile-pic_3.png"
+          src="https://avatars.githubusercontent.com/u/52962217?v=4"
           height={320}
           width={340}
           objectFit="cover"
