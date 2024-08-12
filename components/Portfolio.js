@@ -181,7 +181,7 @@ const Portfolio = () => {
           title="Kona Equity Premium Page Redesign"
           description="This project was a redesign of Kona Equity's premium page with the aim of boosting paying conversions. Together with a talented designer, I implemented this design with NextJS and TailwindCSS. There was a 25% increase in sales within the first month alone!"
           link="https://konaequity.com/premium"
-          img="https://cdn.discordapp.com/attachments/817048198022430761/1056661734913474640/Screen_Shot_2022-12-24_at_7.22.38_PM.png"
+          img="/images/kona1.png"
           first="https://cdn.discordapp.com/attachments/839784544798638090/1056301485123702835/Screen_Shot_2022-12-24_at_7.31.23_PM.png"
           second="https://cdn.discordapp.com/attachments/839784544798638090/1056301484783972542/Screen_Shot_2022-12-24_at_7.31.53_PM.png"
           third="https://cdn.discordapp.com/attachments/839784544798638090/1056301485752856676/Screen_Shot_2022-12-24_at_7.30.49_PM.png"
