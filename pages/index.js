@@ -95,14 +95,15 @@ const Home = () => {
 
       {/* Temporary coming soon component */}
 
-      {/* <ComingSoon /> */}
+      <ComingSoon />
       {/* Change below className and add lg:flex and remove hidden */}
       {/* <main className={loaded ? 'flex-col lg:flex  ' : 'hidden'}> */}
       <main
         className={
           // loaded
-          'flex-col transition-all duration-300 ease-in lg:flex'
+          // 'flex-col transition-all duration-300 ease-in lg:flex'
           // : 'hidden'
+          'hidden'
         }
       >
         {/* Left Side */}

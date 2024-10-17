@@ -182,28 +182,28 @@ const Portfolio = () => {
           description="This project was a redesign of Kona Equity's premium page with the aim of boosting paying conversions. Together with a talented designer, I implemented this design with NextJS and TailwindCSS. There was a 25% increase in sales within the first month alone!"
           link="https://konaequity.com/premium"
           img="/images/kona1.png"
-          first="https://cdn.discordapp.com/attachments/839784544798638090/1056301485123702835/Screen_Shot_2022-12-24_at_7.31.23_PM.png"
-          second="https://cdn.discordapp.com/attachments/839784544798638090/1056301484783972542/Screen_Shot_2022-12-24_at_7.31.53_PM.png"
-          third="https://cdn.discordapp.com/attachments/839784544798638090/1056301485752856676/Screen_Shot_2022-12-24_at_7.30.49_PM.png"
+          first="/images/kona1.png"
+          second="/images/kona2.png"
+          third="/images/kona-3.png"
           fourth="https://cdn.discordapp.com/attachments/817048198022430761/1056652095169773568/kona-3.png"
         />
 
         <Card
           link="https://medium.com/@sosahlawe/build-a-real-time-flight-tracker-with-nextjs-tailwindcss-and-react-map-gl-a-step-by-step-d480d053052c"
-          img="https://cdn.discordapp.com/attachments/839784544798638090/1096041452691259434/Screen_Shot_2023-04-11_at_3.40.11_AM.png"
+          img="/images/RealTimeFlightTracker.png"
           title="Realtime Flight Tracker web app"
           description="November Romeo is a web app that is useful for aviation enthusiasts, travelers, and anyone interested in tracking flights in real-time. It demonstrates the use of popular web development frameworks and APIs to create a modern, interactive, and responsive web application.that tracks commercial flights in real-time using data from the OpenSky Network API. The app displays a world map that updates flight positions every five seconds. The map is built using Mapbox GL JS, and the application is built using React and Next.js.
         Users can interact with the map by dragging and zooming to view flights from different regions.   
        "
-          first="https://cdn.discordapp.com/attachments/839784544798638090/1093161085865046066/Screen_Shot_2023-04-05_at_3.11.16_PM.png"
-          second="https://cdn.discordapp.com/attachments/839784544798638090/1093160143946006680/Screen_Shot_2023-04-05_at_3.07.36_PM.png"
+          first="/images/RealTimeFlightTracker.png"
+          second="/images/trajectoryLine.png"
           third="https://cdn.discordapp.com/attachments/839784544798638090/1093163648182124584/Screenshot_20230405-152038.jpg"
         />
 
         <Card
           link=""
-          first="https://cdn.discordapp.com/attachments/1160095645747662948/1203070445231018054/Screen_Shot_2024-02-02_at_10.11.18_PM.png?ex=65cfc1aa&is=65bd4caa&hm=73d9cb72333e1fdb973a411162d6ff4d4a11aa249d99d9d32946dc7fae871b4f&"
-          second="https://cdn.discordapp.com/attachments/1160095645747662948/1203070445612568678/Screen_Shot_2024-02-02_at_10.10.55_PM.png?ex=65cfc1aa&is=65bd4caa&hm=d12d5ba226411e318898221ca40e451ce0e51b001816c4b626e24557877e2d51&"
+          first="/images/headlessCMS1"
+          second="/images/headlessCMS2"
           title="Headless Content Management System with MERN Stack"
           img="https://cdn.discordapp.com/attachments/1160095645747662948/1203070445231018054/Screen_Shot_2024-02-02_at_10.11.18_PM.png?ex=65cfc1aa&is=65bd4caa&hm=73d9cb72333e1fdb973a411162d6ff4d4a11aa249d99d9d32946dc7fae871b4f&"
           description="This is a fullstack Headless CMS that I built to help manage personal projects and client projects. I built it with the intention of being fully plug and play...to be able to connect and manage content on React/NextJS projects. I chose to make one instead of using an existing one like Wordpress in order to cover my specific needs as a developer"
